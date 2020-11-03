@@ -1,0 +1,122 @@
+.forest{
+    height: 100vh;
+    width: 100%;
+    background-color: #242424;
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+.f-opacity-box{
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    right: 0%;
+    height: 90vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    animation: fOBox 2s ease forwards;
+}
+@keyframes fOBox{
+    from{
+        height: 10vh;
+        left: 100%;
+    }
+}
+.forest .slide-name2{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forest-name{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 4em;
+    opacity: 0;
+    animation: forestTextAnime1 1s ease forwards 1.8s;
+}
+.forest-info{
+    position: absolute;
+    top:55%;
+    left:15%;
+    transform: translateY(-50%);
+    display: flex;
+    opacity: 0;
+    animation: forestTextAnime2 1s ease forwards 2s;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.forest .forest-explore{
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0;
+    animation: forestTextAnime3 1s ease forwards 2.2s;
+}
+.forest-info div{
+    height: 1px;
+    background-color: #fff;
+    width: 40px;
+    margin-top: 8px;
+    margin-right: 20px;
+}
+.forest-info p{
+    font-size: 12px;
+    width: 50%;
+    word-spacing: 2px;
+}
+@keyframes forestTextAnime1{
+    from{
+        left: 20%;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes forestTextAnime2{
+    from{
+        left: 25%;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes forestTextAnime3{
+    from{
+        left: 80%;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.forest .slide-name2 a{
+    color: #fff;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.forest .slide-name2 div{
+    position: absolute;
+    height: 1px;
+    background-color: #fff;
+    right: 120%;
+    left: -400%;
+    animation: slideline2 .5s ease forwards 1s;
+}
+@keyframes slideline2{
+    to{
+        left: -170%;
+    }
+}

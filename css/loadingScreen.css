@@ -1,0 +1,163 @@
+.loading-screen{
+    height: 100vh;
+    width: 100%;
+    background-color: #373737;
+    position: absolute;
+    z-index: 12;
+}
+.loading-content{
+    height: 100vh;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+#logo-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+}
+#logo,mask{
+    animation: fill .5s ease forwards 3.5s;
+}
+#logo :nth-child(2){
+    stroke-dasharray: 583px;
+    stroke-dashoffset: 583px;
+    animation: logoanimation 2s ease forwards .3s;
+}
+#logo :nth-child(3){
+    stroke-dasharray: 530px;
+    stroke-dashoffset: 530px;
+    animation: logoanimation 2s ease forwards .6s;
+}
+#logo :nth-child(4){
+    stroke-dasharray: 578px;
+    stroke-dashoffset: 578px;
+    animation: logoanimation 2s ease forwards .9s;
+}
+#logo :nth-child(5){
+    stroke-dasharray: 648.2px;
+    stroke-dashoffset: 648.2px;
+    animation: logoanimation 2s ease forwards 1.2s;
+}
+#logo :nth-child(6){
+    stroke-dasharray: 604.8px;
+    stroke-dashoffset: 604.8px;
+    animation: logoanimation 2s ease forwards 1.5s;
+}
+#logo :nth-child(7){
+    stroke-dasharray: 346.8000183105469px;
+    stroke-dashoffset: 346.8000183105469px;
+    animation: logoanimation 2s ease forwards 1.8s;
+}
+
+@keyframes logoanimation{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill{
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: white;
+    }
+}
+.paraNbutton{
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    opacity: 0;
+}
+.paraNbutton p{
+    font-size: 14px;
+    font-weight: lighter !important;
+    letter-spacing: 1px;
+}
+.paraNbutton button{
+    padding: 8px 35px;
+    border-radius: 20px;
+    outline: none !important;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    margin-top: 13px;
+    transition: 1s;
+    cursor: pointer;
+    position: relative;
+    top: 40px;
+    opacity: 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+.paraNbutton button:hover{
+    background-color: transparent;
+    color: #fff;
+    transition: 1s;
+}
+.logoUp{
+    animation: logoanimate 1s ease forwards;
+}
+@keyframes logoanimate{
+    to{
+        top:37%;
+    }
+}
+.paraup{
+    animation: paraanimate 1s ease forwards 1s;
+}
+@keyframes paraanimate{
+    to{
+        top:57%;
+        opacity: 1;
+    }
+}
+.buttonup{
+    animation: buttonanimate 1s ease forwards 1.3s;
+}
+@keyframes buttonanimate{
+    to{
+        top:0px;
+        opacity: 1;
+    }
+}
+.disapear{
+    animation: disp .5s ease forwards;
+}
+@keyframes disp{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.slide-left-lscr{
+    animation: slideLeftLS 1s ease-in forwards;
+}
+@keyframes slideLeftLS{
+    /* 0%{
+        transform: translateX(0%);
+    } */
+    to{
+        transform: translateX(-100%);
+        /* display: none; */
+    }
+}
+.slide-right-lscr{
+    animation: slideRightLS 1s ease-in forwards;
+}
+@keyframes slideRightLS{
+    from{
+        transform: translateX(100%);
+        display: block;
+    }
+    to{
+        transform: translateX(0%);
+        /* display: none; */
+    }
+}
