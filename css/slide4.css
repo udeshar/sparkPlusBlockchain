@@ -1,0 +1,160 @@
+.dessert{
+    height: 100vh;
+    width: 100%;
+    background-color: #242424;
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+.activeOwn{
+    display: block !important;
+}
+.productBox{
+    display: none;
+    width: 28%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px 20px;
+    animation: productBox 1.3s ease forwards;
+    /* overflow: hidden; */
+}
+@keyframes productBox{
+    from{
+        left: 130%;
+    }
+}
+.productTitle{
+    position: absolute;
+    top: 28%;
+    left: 5%;
+    width: 100%;
+    transform: translateY(-50%);
+    animation: slide4anm1 1s ease-in-out forwards 1s;
+}
+.productTitle h3{
+    font-size: 2.5rem;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+}
+.productImage{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    animation: slide4anm2 1s ease-in-out forwards 1.3s;
+}
+.productDesc{
+    font-size: 14px;
+    position: absolute;
+    top:65%;
+    /* transform: translateY(-50%); */
+    left:7%;
+    right: 5%;
+    animation: slide4anm3 1s ease-in-out forwards 1.6s;
+}
+.productDesc p{
+    line-height: 2;
+}
+.slide-ind{
+    font-size: 12px;
+}
+.productDesc .pd-line{
+    height: 1px;
+    width: 40px;
+    margin: 20px 0px;
+    background-color: #fff;
+}
+.productDesc .tech-used{
+    margin-top: 40px;
+}
+.tech-used{
+    opacity: 0;
+    animation: slide4anm4 .5s ease-in-out forwards 2s;
+}
+.productDesc .tech-used h3{
+    font-weight: bold;
+    font-size: 12px;
+}
+.p-tech-icon img{
+    width: 60px;
+    height: 60px;
+}
+@keyframes slide4anm1{
+    to{
+        left: -130%;
+    }
+}
+@keyframes slide4anm2{
+    to{
+        left: -50%;
+    }
+}
+@keyframes slide4anm3{
+    to{
+        top: 25%;
+    }
+}
+@keyframes slide4anm4{
+    to{
+        opacity: 1;
+    }
+}
+.next-product{
+    position: absolute;
+    top: 80%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    font-size: 12px;
+    cursor: pointer;
+}
+.prev-product{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 12px;
+    cursor: pointer;
+}
+.customProductBox{
+    animation: productBox2 1.1s ease forwards 1.5s;
+}
+@keyframes productBox2{
+    to{
+        top: 200%;
+    }
+}
+.customProductBox .productTitle{
+    left: -130%;
+    animation: slide4anm12 .8s ease forwards 0.8s;
+}
+.customProductBox .productImage{
+    left: -50%;
+    animation: slide4anm12 .8s ease forwards 0.8s;
+}
+@keyframes slide4anm12{
+    to{
+        left: 5%;
+    }
+}
+.customProductBox .productDesc{
+    top:25%;
+    animation: slide4anm31 .5s ease-in-out forwards 0.5s;
+}
+.customProductBox .tech-used{
+    opacity: 1;
+    animation: slide4anm41 .5s ease-in-out forwards;
+}
+@keyframes slide4anm31{
+    to{
+        top:65%;
+    }
+}
+@keyframes slide4anm41{
+    to{
+        opacity: 0;
+    }
+}
