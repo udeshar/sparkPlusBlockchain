@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkplus Blockchain</title>
+
+    <!-- css linking -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/loadingScreen.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/menuOpenClose.css">
+    <link rel="stylesheet" href="./css/slides.css">
+    <link rel="stylesheet" href="./css/slide2.css">
+    <link rel="stylesheet" href="./css/slide3.css">
+    <link rel="stylesheet" href="./css/slide4.css">
+    <link rel="stylesheet" href="./css/contactUs.css">
+    <link rel="stylesheet" href="./css/menuScreen.css">
+    <link rel="stylesheet" href="./css/mediaQueries.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- fontawesome 4.7.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+
+</head>
+<body onload="loadBody()">
+    <div class="whole-container" id="whole-container">
+
+        <div id="contactUs" class="d-none" style="min-height: 100vh;">
+                <div class="backToHome text-light cont-slide-up" style="opacity: 0;" id="backToHome">
+                    <i class="fa fa-angle-left m-0 p-0" aria-hidden="true"></i>
+                    <i class="fa fa-angle-left m-0 p-0 " aria-hidden="true"></i>
+                </div>
+            
+            <div class="cont-wrapper">
+                <p class="cont-heading cont-slide-up">Contact Us</p>
+                <div class="row cont-row">
+                    <div class="col-md-6 d-flex justify-content-center cont-slide-up cont-col-1" style="flex-direction: column;opacity: 0;">
+                        <p class="cont-small-text" style="width: 85%;">Connect with us to know each other's journey, explore possibilities to grow together. We would like to be a part of your journey.</p>
+                        <p class="cont-small-text">You can also get in touch with us</p>
+                        <p class="cont-small-text font-weight-bold">hello@sparkplustech.com</p>
+                        <p class="cont-small-text font-weight-bold">+1 602-314-0425 (US)</p>
+                        <div class="d-flex cont-media">
+                            <a href="https://www.facebook.com/sparkplustech/"><i class="fa fa-facebook pr-3" aria-hidden="true"></i></a>
+                            <a href="https://in.linkedin.com/company/sparkplustech"><i class="fa fa-linkedin pr-3" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/sparkplustech"><i class="fa fa-twitter pr-3" aria-hidden="true"></i></a>
+                            <a href="https://medium.com/@SparkPlusTech"><i class="fa fa-medium pr-3" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 cont-slide-up cont-col-2 pl-lg-3">
+                        <form action="" method="post" id="cont-form" class="cont-small-text">
+                            <div>
+                                <label for="fullName">Full Name</label>
+                                <input type="text" name="fullName" id="fullName">
+                            </div>
+                            <div>
+                                <label for="email">Email Address</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div>
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="3"></textarea>
+                            </div>
+                            <div>
+                                <input type="submit" value="SEND" class="submitButton">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Screen Begins -->
+        <div class="loading-screen" id="loading-screen">
+            <div class="loading-content" id="loading-content">
+                <div id="logo-div">
+                    <svg width="500" height="70" viewBox="0 0 621 133" fill="none" xmlns="http://www.w3.org/2000/svg" id="logo">
+                        <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="-0.309998" y="0.979996" width="621" height="132" fill="black">
+                            <rect fill="white" x="-0.309998" y="0.979996" width="621" height="132"/>
+                            <path d="M46.66 127.19C38.84 127.19 31.8133 125.83 25.58 123.11C19.46 120.277 14.6433 116.423 11.13 111.55C7.61667 106.563 5.80334 100.84 5.69 94.38H22.18C22.7467 99.9333 25.0133 104.637 28.98 108.49C33.06 112.23 38.9533 114.1 46.66 114.1C54.0267 114.1 59.8067 112.287 64 108.66C68.3067 104.92 70.46 100.16 70.46 94.38C70.46 89.8467 69.2133 86.1633 66.72 83.33C64.2267 80.4967 61.11 78.3433 57.37 76.87C53.63 75.3967 48.5867 73.81 42.24 72.11C34.42 70.07 28.13 68.03 23.37 65.99C18.7233 63.95 14.7 60.7767 11.3 56.47C8.01334 52.05 6.37 46.1567 6.37 38.79C6.37 32.33 8.01334 26.6067 11.3 21.62C14.5867 16.6333 19.1767 12.78 25.07 10.06C31.0767 7.33999 37.9333 5.98 45.64 5.98C56.7467 5.98 65.8133 8.75666 72.84 14.31C79.98 19.8633 84.0033 27.23 84.91 36.41H67.91C67.3433 31.8767 64.9633 27.91 60.77 24.51C56.5767 20.9967 51.0233 19.24 44.11 19.24C37.65 19.24 32.38 20.94 28.3 24.34C24.22 27.6267 22.18 32.2733 22.18 38.28C22.18 42.5867 23.37 46.1 25.75 48.82C28.2433 51.54 31.2467 53.6367 34.76 55.11C38.3867 56.47 43.43 58.0567 49.89 59.87C57.71 62.0233 64 64.1767 68.76 66.33C73.52 68.37 77.6 71.6 81 76.02C84.4 80.3267 86.1 86.22 86.1 93.7C86.1 99.48 84.57 104.92 81.51 110.02C78.45 115.12 73.9167 119.257 67.91 122.43C61.9033 125.603 54.82 127.19 46.66 127.19Z"/>
+                            <path d="M188.085 42.19C188.085 52.05 184.685 60.2667 177.885 66.84C171.199 73.3 160.942 76.53 147.115 76.53H124.335V126H108.865V7.50999H147.115C160.489 7.50999 170.632 10.74 177.545 17.2C184.572 23.66 188.085 31.99 188.085 42.19ZM147.115 63.78C155.729 63.78 162.075 61.91 166.155 58.17C170.235 54.43 172.275 49.1033 172.275 42.19C172.275 27.57 163.889 20.26 147.115 20.26H124.335V63.78H147.115Z"/>
+                            <path d="M277.353 99.65H225.673L216.153 126H199.833L242.673 8.18999H260.523L303.193 126H286.873L277.353 99.65ZM272.933 87.07L251.513 27.23L230.093 87.07H272.933Z"/>
+                            <path d="M384.253 126L356.033 77.55H337.333V126H321.863V7.50999H360.113C369.067 7.50999 376.603 9.04 382.723 12.1C388.957 15.16 393.603 19.2967 396.663 24.51C399.723 29.7233 401.253 35.6733 401.253 42.36C401.253 50.52 398.873 57.7167 394.113 63.95C389.467 70.1833 382.44 74.32 373.033 76.36L402.783 126H384.253ZM337.333 65.14H360.113C368.5 65.14 374.79 63.1 378.983 59.02C383.177 54.8267 385.273 49.2733 385.273 42.36C385.273 35.3333 383.177 29.8933 378.983 26.04C374.903 22.1867 368.613 20.26 360.113 20.26H337.333V65.14Z"/>
+                            <path d="M489.551 126L440.761 71.94V126H425.291V7.50999H440.761V62.42L489.721 7.50999H509.271L455.551 66.84L509.781 126H489.551Z"/>
+                            <path d="M615.459 70.41H579.249V107.13H564.799V70.41H528.759V57.32H564.799V20.43H579.249V57.32H615.459V70.41Z"/>
+                        </mask>
+                        <path d="M46.66 127.19C38.84 127.19 31.8133 125.83 25.58 123.11C19.46 120.277 14.6433 116.423 11.13 111.55C7.61667 106.563 5.80334 100.84 5.69 94.38H22.18C22.7467 99.9333 25.0133 104.637 28.98 108.49C33.06 112.23 38.9533 114.1 46.66 114.1C54.0267 114.1 59.8067 112.287 64 108.66C68.3067 104.92 70.46 100.16 70.46 94.38C70.46 89.8467 69.2133 86.1633 66.72 83.33C64.2267 80.4967 61.11 78.3433 57.37 76.87C53.63 75.3967 48.5867 73.81 42.24 72.11C34.42 70.07 28.13 68.03 23.37 65.99C18.7233 63.95 14.7 60.7767 11.3 56.47C8.01334 52.05 6.37 46.1567 6.37 38.79C6.37 32.33 8.01334 26.6067 11.3 21.62C14.5867 16.6333 19.1767 12.78 25.07 10.06C31.0767 7.33999 37.9333 5.98 45.64 5.98C56.7467 5.98 65.8133 8.75666 72.84 14.31C79.98 19.8633 84.0033 27.23 84.91 36.41H67.91C67.3433 31.8767 64.9633 27.91 60.77 24.51C56.5767 20.9967 51.0233 19.24 44.11 19.24C37.65 19.24 32.38 20.94 28.3 24.34C24.22 27.6267 22.18 32.2733 22.18 38.28C22.18 42.5867 23.37 46.1 25.75 48.82C28.2433 51.54 31.2467 53.6367 34.76 55.11C38.3867 56.47 43.43 58.0567 49.89 59.87C57.71 62.0233 64 64.1767 68.76 66.33C73.52 68.37 77.6 71.6 81 76.02C84.4 80.3267 86.1 86.22 86.1 93.7C86.1 99.48 84.57 104.92 81.51 110.02C78.45 115.12 73.9167 119.257 67.91 122.43C61.9033 125.603 54.82 127.19 46.66 127.19Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                        <path d="M188.085 42.19C188.085 52.05 184.685 60.2667 177.885 66.84C171.199 73.3 160.942 76.53 147.115 76.53H124.335V126H108.865V7.50999H147.115C160.489 7.50999 170.632 10.74 177.545 17.2C184.572 23.66 188.085 31.99 188.085 42.19ZM147.115 63.78C155.729 63.78 162.075 61.91 166.155 58.17C170.235 54.43 172.275 49.1033 172.275 42.19C172.275 27.57 163.889 20.26 147.115 20.26H124.335V63.78H147.115Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                        <path d="M277.353 99.65H225.673L216.153 126H199.833L242.673 8.18999H260.523L303.193 126H286.873L277.353 99.65ZM272.933 87.07L251.513 27.23L230.093 87.07H272.933Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                        <path d="M384.253 126L356.033 77.55H337.333V126H321.863V7.50999H360.113C369.067 7.50999 376.603 9.04 382.723 12.1C388.957 15.16 393.603 19.2967 396.663 24.51C399.723 29.7233 401.253 35.6733 401.253 42.36C401.253 50.52 398.873 57.7167 394.113 63.95C389.467 70.1833 382.44 74.32 373.033 76.36L402.783 126H384.253ZM337.333 65.14H360.113C368.5 65.14 374.79 63.1 378.983 59.02C383.177 54.8267 385.273 49.2733 385.273 42.36C385.273 35.3333 383.177 29.8933 378.983 26.04C374.903 22.1867 368.613 20.26 360.113 20.26H337.333V65.14Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                        <path d="M489.551 126L440.761 71.94V126H425.291V7.50999H440.761V62.42L489.721 7.50999H509.271L455.551 66.84L509.781 126H489.551Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                        <path d="M615.459 70.41H579.249V107.13H564.799V70.41H528.759V57.32H564.799V20.43H579.249V57.32H615.459V70.41Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                    </svg> 
+                </div> 
+                <div class="paraNbutton">
+                    <p id="para">
+                        Global Innovation Hub<br>
+                        To transform your Spark into reality<br>
+                        To Make Innovation Work For You
+                    </p>
+                    <button id="main-button" onclick="openHomePage()">Get Me In</button> 
+                </div> 
+            </div>             
+        </div>
+        <!-- Loading Screen Ends -->
+
+        <!-- home screen -->
+        <div class="home-container" id="home-container">
+
+            <!-- navbar begins -->
+            <nav class="navbar navbar-expand-md text-light fixed-top">
+                <a class="navbar-brand text-animation-udesh" href="#">
+                    <!-- <span class="letter1">S</span>
+                    <span class="letter2">p</span>
+                    <span class="letter3">a</span>
+                    <span class="letter4">r</span>
+                    <span class="letter5">k</span>
+                    <span class="letter6">+</span> -->
+                    <img src="./images/latestImages/SparkPlus_Whitelogosmall.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item " onclick="showIntro()">
+                            <a class="nav-link text-animation-udesh" href="#">
+                                <span class="letter1">I</span>
+                                <span class="letter2">n</span>
+                                <span class="letter3">t</span>
+                                <span class="letter4">r</span>
+                                <span class="letter5">o</span>
+                            </a>
+                            <div class="nav__underline activeNav">
+                                <div class="navProgress" style="background-color: #fff; width: 100%;"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item" onclick="showForest()">
+                            <a class="nav-link text-animation-udesh" href="#">
+                                <span class="letter1">T</span>
+                                <span class="letter2">e</span>
+                                <span class="letter3">c</span>
+                                <span class="letter4">h</span>
+                                <span class="letter5">n</span>
+                                <span class="letter6">o</span>
+                                <span class="letter6">l</span>
+                                <span class="letter6">o</span>
+                                <span class="letter6">g</span>
+                                <span class="letter6">y</span>
+                            </a>
+                            <div class="nav__underline">
+                                <div class="navProgress" id="navProgress"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item" onclick="showOcean()">
+                            <a class="nav-link text-animation-udesh" href="#">
+                                <span class="letter1">S</span>
+                                <span class="letter2">e</span>
+                                <span class="letter3">r</span>
+                                <span class="letter4">v</span>
+                                <span class="letter5">i</span>
+                                <span class="letter5">c</span>
+                                <span class="letter5">e</span>
+                                <span class="letter5">s</span>
+                            </a>
+                            <div class="nav__underline">
+                                <div class="navProgress" id="navProgress2"></div>
+                            </div>
+                        </li>    
+                        <li class="nav-item" onclick="showDessert()">
+                            <a class="nav-link text-animation-udesh" href="#">
+                                <span class="letter1">P</span>
+                                <span class="letter2">o</span>
+                                <span class="letter3">r</span>
+                                <span class="letter4">t</span>
+                                <span class="letter5">f</span>
+                                <span class="letter6">o</span>
+                                <span class="letter7">l</span>
+                                <span class="letter7">i</span>
+                                <span class="letter7">o</span>
+                            </a>
+                            <div class="nav__underline">
+                                <div class="navProgress" id="navProgress3"></div>
+                            </div>
+                        </li>    
+                    </ul>
+                </div>  
+                <div id="wrapper" onclick="showMenu()">
+                    <div class="circle icon">
+                        <span class="line top"></span>
+                        <span class="line middle"></span>
+                        <span class="line bottom"></span>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar ends -->
+
+            <!-- lines begins here -->
+            <div class="lines-container">
+                <div class="lines" id="lines1"><p>0</p></div>
+                <div class="lines" id="lines2"><p>0</p></div>
+                <div class="lines" id="lines3"><p id="valueToChange">1</p></div> 
+            </div>
+            <!-- lines ends here -->
+
+            <!-- side navbar begins -->
+            <div class="side-navbar" id="side-navbar">
+                <div class="nav1 side-nav side-nav-active" onclick="showIntro()">
+                    <p>Intro</p>
+                    <a href="#" class="side-nav-link">
+                        <div></div>
+                    </a>
+                </div>
+                <div class="nav2 side-nav" onclick="showForest()">
+                    <p>Technology</p>
+                    <a href="#" class="side-nav-link">
+                        <div></div>
+                    </a>
+                </div>
+                <div class="nav3 side-nav" onclick="showOcean()">
+                    <p>Services</p>
+                    <a href="#" class="side-nav-link">
+                        <div></div>
+                    </a>
+                </div>
+                <div class="nav4 side-nav" onclick="showDessert()">
+                    <p>Portfolio</p>                    
+                    <a href="#" class="side-nav-link">
+                        <div></div>
+                    </a>
+                </div>
+            </div>
+            <!-- side navbar ends -->
+
+            <!-- contact us and about us begins -->
+            <div class="cont-abt-block">
+                <div class="contact">
+                    <a class="text-animation-udesh" id="contactUsBtn">
+                        <span class="letter1">C</span>
+                        <span class="letter2">o</span>
+                        <span class="letter3">n</span>
+                        <span class="letter4">t</span>
+                        <span class="letter5">a</span>
+                        <span class="letter6">c</span>
+                        <span class="letter7">t</span>
+                    </a>
+                </div>
+                <div class="cont-abt-line"><div></div></div>
+                <div class="contact">
+                    <a href="" class="text-animation-udesh">
+                        <span class="letter1">A</span>
+                        <span class="letter2">b</span>
+                        <span class="letter3">o</span>
+                        <span class="letter4">u</span>
+                        <span class="letter5">t</span>
+                    </a>
+                </div>
+            </div>
+            <!-- contact us and about us begins ends -->
+
+            <!-- scroll text begins -->
+            <div class="scroll">
+                <div></div>
+                <a href="" class="text-animation-udesh">
+                    <span class="letter1">S</span>
+                    <span class="letter2">c</span>
+                    <span class="letter3">r</span>
+                    <span class="letter4">o</span>
+                    <span class="letter5">l</span>
+                    <span class="letter6">l</span>
+                </a>
+            </div>
+            <!-- scroll text ends -->
+
+            <!-- menu screen -->
+            <div class="menu-screen">
+                <div class="menu-items">
+                    <ul>
+                        <li>Projects</li>
+                        <ul class="secondUl">
+                            <li onclick="showIntro()">
+                                <div></div>
+                                <a href="#" class="menu-it active-menu-screen">Intro</a>
+                            </li>
+                            <li onclick="showForest()">
+                                <div></div>
+                                <a href="#" class="menu-it">Technology</a>
+                            </li>
+                            <li onclick="showOcean()">
+                                <div></div>
+                                <a href="#" class="menu-it">Services</a>
+                            </li>
+                            <li onclick="showDessert()">
+                                <div></div>
+                                <a href="#" class="menu-it">Portfolio</a>
+                            </li>
+                        </ul>
+                        <li><a onclick="gotocontact(1)">Contact us</li></a>
+                        <li><a href="#">About us</li></a>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <div class="d-flex mr-4" onclick="gotocontact(1)" style="cursor: pointer;">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span class="ml-2">Call us</span>
+                    </div>
+                    <div class="d-flex" onclick="gotocontact(1)" style="cursor: pointer;">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span class="ml-2">Leave a message</span>
+                    </div>
+                    
+                </div>
+                <div class="media-box">
+                    <a href="https://www.facebook.com/sparkplustech/"><div class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>
+                    <a href="https://in.linkedin.com/company/sparkplustech"><div class="linked"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a>
+                    <a href="https://twitter.com/sparkplustech"><div class="tw"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>
+                    <a href="https://medium.com/@SparkPlusTech"><div class="med"><i class="fa fa-medium" aria-hidden="true"></i></div></a>
+                </div>
+            </div>
+            <!-- menu screen close -->
+
+            <!-- intro slide begins -->
+            <div class="intro" id="intro">
+
+                <img src="./images/statue.png" alt="statue of blockchain" class="statueImage">
+
+                <div class="opacity-box">
+                    <div class="opacity-inside-box"></div>
+
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Intro</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+
+                    <!-- brand name begins -->
+                    <div class="brand-name">
+                        <p class="sprk">Spark+</p>
+                        <div class="blockc-line">
+                            <div class="brand-line"><span></span></div>
+                            <p>Blockchain</p>
+                        </div>
+                    </div>
+                    <!-- brand name end -->
+                    <!-- brand description begins -->
+                    <div class="brand-desc">
+                        <p>Spark+ is a superfine blockchain development company to render you with successful Blockchain Software Solutions in a cost-effective way to enhance the functionality of your business!</p>
+                    </div>
+                    <!-- brand description ends -->
+
+                    <a href="#" class="explore-more">Explore more</a>
+                </div>
+                <div class="next-arrow1" onclick="showForest()">
+                    <span>next Page</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+            </div>
+            <!-- intro slides ends -->
+
+            <!-- forest slide begins -->
+            <div class="forest">
+
+                <div class="f-opacity-box">
+
+                    <div class="technology-slider ts1" id="ts1">
+                        <img class="crypto-big-logos" src="./images/ethereum.png" alt="etherium" style="-webkit-filter: drop-shadow(5px 5px 5px #343434);filter: drop-shadow(5px 5px 20px #343434);">
+                        <p class="forest-name">Etherium</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>A decentralized public platform that runs dApps</p>
+                        </div>
+                    </div>
+                    <div class="technology-slider ts2" id="ts2">
+                        <img class="crypto-big-logos" src="./images/latestImages/hyperledger.png" alt="Hyperledger" style="-webkit-filter: drop-shadow(1px 1px 15px #7b7b7b);filter: drop-shadow(1px 1px 15px #7b7b7b);">
+                        <p class="forest-name">Hyperledger</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>An open source community focused on developing a suite of stable frameworks, tools and libraries for enterprise-grade blockchain deployments.</p>
+                        </div>
+                    </div>
+                    <div class="technology-slider ts3" id="ts3">
+                        <img class="crypto-big-logos" src="./images/latestImages/Polkadot logo-02.png" alt="Palkadot" style="-webkit-filter: drop-shadow(1px 1px 15px rgb(167, 167, 167));filter: drop-shadow(1px 1px 15px rgb(167, 167, 167));">
+                        <p class="forest-name">Palkadot</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>Track to deliver the most robust platform for security, scalability and innovation.</p>
+                        </div>
+                    </div>
+                    <div class="technology-slider ts4" id="ts4">
+                        <img class="crypto-big-logos" src="./images/latestImages/matic-network.svg" alt="Matic" style="-webkit-filter: drop-shadow(1px 1px 15px #1b5ea1);filter: drop-shadow(1px 1px 15px #1b5ea1);">
+                        <p class="forest-name">Matic</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>Massive scale to Ethereum using an adapted version of Plasma with PoS based side chains.</p>
+                        </div>
+                    </div>
+                    <div class="technology-slider ts5" id="ts5">
+                        <img class="crypto-big-logos" src="./images/latestImages/dragonchain-drgn-logo.png" alt="Dragonchain" style="-webkit-filter: drop-shadow(1px 1px 15px #005099);filter: drop-shadow(1px 1px 15px #005099);">
+                        <p class="forest-name">Dragonchain</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>Platform to build flexible and scalable blockchain applications.</p>
+                        </div>
+                    </div>
+                    <div class="technology-slider ts6" id="ts6">
+                        <img class="crypto-big-logos" src="./images/latestImages/binance.png" alt="Binance" style="-webkit-filter: drop-shadow(1px 1px 15px #97751f);filter: drop-shadow(1px 1px 15px #97751f);">
+                        <p class="forest-name">Binance</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>Binance is a Cayman Islands-domiciled cryptocurrency exchange that provides a platform for trading various cryptocurrencies</p>
+                        </div>
+                    </div>
+                    <div class="technology-slider ts7" id="ts7">
+                        <img class="crypto-big-logos" src="./images/latestImages/substrate.png" alt="Substrate" style="-webkit-filter: drop-shadow(1px 1px 15px #fff);filter: drop-shadow(1px 1px 15px #fff);">
+                        <p class="forest-name">Substrate</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>Substrate is a modular framework that enables you to create purpose-built blockchains by composing custom or pre-built components.</p>
+                        </div>
+                    </div>
+                    <div class="technology-slider ts8" id="ts8">
+                        <img class="crypto-big-logos" src="./images/latestImages/chainlink-link-logo.png" alt="Chainlink" style="-webkit-filter: drop-shadow(1px 1px 15px #1d3c92);filter: drop-shadow(1px 1px 15px #1d3c92);">
+                        <p class="forest-name">Chainlink</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>Chainlink's decentralized oracle network provides reliable, tamper-proof inputs and outputs for complex smart contracts on any blockchain.</p>
+                        </div>
+                    </div>
+                    <div class="technology-slider ts9" id="ts9">
+                        <img class="crypto-big-logos" src="./images/latestImages/oxcert.svg" alt="Oxcert" style="-webkit-filter: drop-shadow(1px 1px 15px #003988);filter: drop-shadow(1px 1px 15px #003988);">
+                        <p class="forest-name">Oxcert</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>Build decentralized apps using fungible and non-fungible tokens quickly, cost efficiently and securely.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="crypto-logos">
+                        <img src="./images/ethereum.png" alt="etherium png logo">
+                        <img src="./images/latestImages/hyperledger.png" alt="hyperledger png logo">
+                        <img src="./images/latestImages/Polkadot logo-02.png" alt="palkadot png logo">
+                        <img src="./images/latestImages/matic-network.svg" alt="matic png logo">
+                        <img src="./images/latestImages/dragonchain-drgn-logo.png" alt="dragonchain png logo">
+                        <img src="./images/latestImages/binance.png" alt="binance png logo">
+                        <img src="./images/latestImages/substrate.png" alt="substrate png logo">
+                        <img src="./images/latestImages/chainlink-link-logo.png" alt="chainlink png logo">
+                        <img src="./images/latestImages/oxcert.svg" alt="oxcert png logo">
+                    </div>
+
+                    <div class="next-arrow" onclick="changeTS()" id="nxtBtn">
+                        <span id="nxt-btn-txt">next</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="prev-arrow" onclick="changeTSback()" id="prevBtn">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span id="prev-btn-txt">prev page</span>
+                    </div>
+
+                    <div class="slide-name2">
+                        <div></div>
+                        <a href="">Technology</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- forest slide ends -->
+
+            <!-- Ocean slide begin -->
+            <div class="ocean">
+                <div class="ocean-container">
+
+                    <div class="services-slide s1" id="s1">
+                        <div class="ocean-opacity-box1" id="s1tl">
+                            <h3 id="s-h3-1">Tokenization</h3>
+                        </div>
+                        <img src="./images/latestImages/token1.gif" alt="Tokenization" class="services-img" id="s1-img">
+                        <div class="ocean-opacity-box2" id="s1br">
+                            <div class="service-info">
+                                <div id="sercices-lineBeforeP1"></div>
+                                <p id="s-p-1">Tokenization is the first step towards entering into decentralized finance. SPARK+ takes care of your token journey by building a range of platforms which enables to launch, distribute and manage your token economy.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services-slide s2" id="s2">
+                        <div class="ocean-opacity-box1" id="s2tl">
+                            <h3 id="s-h3-2">Decentralized Finance</h3>
+                        </div>
+                        <img src="./images/latestImages/decentralized1-unscreen.gif" alt="Decentralized Finance" class="services-img" id="s2-img">
+                        <div class="ocean-opacity-box2" id="s2br">
+                            <div class="service-info">
+                                <div id="sercices-lineBeforeP2"></div>
+                                <p id="s-p-2">Decentralized finance refers to the shift from centralized financial systems to peer-to-peer finance. SPARK+ helps you to build interconnected financial ecosystems where each one has the opportunity to grow with the fluctuations in supply and demand.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services-slide s3" id="s3">
+                        <div class="ocean-opacity-box1" id="s3tl">
+                            <h3 id="s-h3-3">Blockchain Network Development</h3>
+                        </div>
+                        <img src="./images/latestImages/api1-unscreen.gif" alt="Blockchain Network Development" class="services-img" id="s3-img">
+                        <div class="ocean-opacity-box2" id="s3br">
+                            <div class="service-info">
+                                <div id="sercices-lineBeforeP3"></div>
+                                <p id="s-p-3">The technology is in early state but SPARK+ is here to helps you to build a custom blockchain with your own rules, protocols(POA,POS,POW) and EVM combinations with interoperable advanced platforms such as polkadot, Cosmos, multichain, Wanchain.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services-slide s4" id="s4">
+                        <div class="ocean-opacity-box1" id="s4tl">
+                            <h3 id="s-h3-4">dApps Development</h3>
+                        </div>
+                        <img src="./images/services/dapp1.png" alt="blockchain consulting" class="services-img" id="s4-img">
+                        <div class="ocean-opacity-box2" id="s4br">
+                            <div class="service-info">
+                                <div id="sercices-lineBeforeP4"></div>
+                                <p id="s-p-4">From ideation to design and development, our blockchain developers can build enterprise-grade decentralized applications (dApps) to help clients accelerate time to market and maximize ROI.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services-slide s5" id="s5">
+                        <div class="ocean-opacity-box1" id="s5tl">
+                            <h3 id="s-h3-5">Entreprise App Solutions</h3>
+                        </div>
+                        <img src="./images/latestImages/solution1-unscreen.gif" alt="Entreprise App Solutions" class="services-img" id="s5-img">
+                        <div class="ocean-opacity-box2" id="s5br">
+                            <div class="service-info">
+                                <div id="sercices-lineBeforeP5"></div>
+                                <p id="s-p-5">We harness the potential of varied Blockchain platforms to deliver innovative enterprise grade blockchain solutions, understand enterprise needs and privacy. Blockchain can take your process automation to the next level with it’s decentralised and secure infrastructure.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="services-progress">
+                        <p><span id="s-slideNum">1</span>/5</p>
+                        <div class="s-progress-bar">
+                            <div id="s-ProgressBar"></div>
+                        </div>
+                        <div class="s-buttons">
+                            <div class="s-prev-btn p-btn" onclick="goToPrev()" onmousedown="jumpToAPage('prev')" onmouseup="jumpToAPage2('prev')">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                <span id="prev-btn-txt2">prev page</span>
+                                <div class="holdPrevBtn">Hold mouse Button to switch to previous page</div>
+                            </div>
+                            <div class="s-next-btn n-btn" onclick="goToNxt()" onmousedown="jumpToAPage()" onmouseup="jumpToAPage2()">
+                                <span id="next-btn-txt2">next</span>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <div class="holdNextBtn">Hold mouse Button to switch to next page</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="services-txt">
+                        <div></div>
+                        <a href="" class="text-animation-udesh">
+                            <span class="letter1">S</span>
+                            <span class="letter2">e</span>
+                            <span class="letter3">r</span>
+                            <span class="letter4">v</span>
+                            <span class="letter5">i</span>
+                            <span class="letter6">c</span>
+                            <span class="letter6">e</span>
+                            <span class="letter6">s</span>
+                        </a>
+                    </div>
+
+                </div>    
+            </div>
+            <!-- Ocean slide ends -->
+
+            <!-- dessert slide begins -->
+            <div class="dessert">
+
+                <div class="productBox activeOwn" id="productBox">
+                    <p class="slide-ind">1/9</p>
+                    <div class="productTitle">
+                        <h3>Sparkland</h3>
+                    </div>
+                    <div class="productImage" id="sparkland">
+                        <img src="./images/sparkland.png" alt="Sparkland ">
+                    </div>
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>A place for everyone to light-up, team-up, and start-up what you want to create.Share your spark story. Invite others for networking, brainstorming, and research.</p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>React Native, NodeJs</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/reactjs.png" alt="">
+                                <img src="./images/nodejs.png" alt="">
+                            </div>
+                        </div>                       
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox2">
+                    <p class="slide-ind">2/9</p>
+                    <div class="productTitle">
+                        <h3>Autobet gaming ecosystem</h3>
+                    </div>
+
+                    <div class="productImage" id="autobet">
+                        <img src="./images/latestImages/autobet.png" alt="Autobet">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>To build a unique blockchain based lottery platform. The vision of the project is to build an ecosystem of transparent lottery and DeFi services together.</p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>Blockchain</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/ethereum.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox3">
+                    <p class="slide-ind">3/9</p>
+                    <div class="productTitle">
+                        <h3>Cryptochrome</h3>
+                    </div>
+
+                    <div class="productImage">
+                        <img src="./images/cryptochrome.png" alt="Sparkplus lottery image" width="70%">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>To develop a community liquidity mining and staking platform. A decentralized DeFi platform having various features.</p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>Blockchain</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/ethereum.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox4">
+                    <p class="slide-ind">4/9</p>
+                    <div class="productTitle">
+                        <h3>SOLO</h3>
+                    </div>
+
+                    <div class="productImage" id="solo">
+                        <img src="./images/latestImages/Group 2 (1).png" alt="Sparkplus lottery image">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>A platform, connecting education , practical training  & potential employment opportunity that sets up for a career path.
+                            </p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>ReactJs, Javascript</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/reactjs.png" alt="">
+                                <img src="./images/js.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox5">
+                    <p class="slide-ind">5/9</p>
+                    <div class="productTitle">
+                        <h3>Sparklottery</h3>
+                    </div>
+
+                    <div class="productImage">
+                        <img src="./images/sparklottery.png" alt="Spark lottery image">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>Online lottery is a system which is designed to bring transparency in paper-based gambling & lottery system using blockchain technology.
+                        </p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>Etherium, Javascript</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/ethereum.png" alt="">
+                                <img src="./images/js.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox6">
+                    <p class="slide-ind">6/9</p>
+                    <div class="productTitle">
+                        <h3>Simplacity</h3>
+                    </div>
+
+                    <div class="productImage">
+                        <img src="./images/latestImages/simplacityIllus.png" alt="Spark lottery image">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>The SimplaCity ID Service enables the consumer to control the release, use and monetization of PII. It is available for any software to access via API and blockchain proofs/access logs
+                        </p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>Dragonchain</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/latestImages/dragonchain-drgn-logo.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox7">
+                    <p class="slide-ind">7/9</p>
+                    <div class="productTitle">
+                        <h3>
+                            Smart ballots</h3>
+                    </div>
+
+                    <div class="productImage">
+                        <img src="./images/latestImages/smartBallot.png" alt="Spark lottery image">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>Smart Ballot will be transparent voting system build on hybrid blockchain (Dragonchain) to take voting process at another level
+                        </p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>Blockchain</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/ethereum.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox8">
+                    <p class="slide-ind">8/9</p>
+                    <div class="productTitle">
+                        <h3>NFT Marketplace</h3>
+                    </div>
+
+                    <div class="productImage">
+                        <img src="./images/latestImages/nft.png" alt="Spark lottery image">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>ERC 721 non-fungible tokens and Asset management. 0xcert to build decentralized apps and The POC creates certificates and assets which are transferable and redeemable.
+                        </p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>Oxcert, ReactJs, Etherium</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/latestImages/oxcert.svg" alt="">
+                                <img src="./images/reactjs.png" alt="">
+                                <img src="./images/ethereum.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox9">
+                    <p class="slide-ind">9/9</p>
+                    <div class="productTitle">
+                        <h3>Weedcommerce</h3>
+                    </div>
+
+                    <div class="productImage">
+                        <img src="./images/latestImages/weedcommerce.png" alt="Spark lottery image">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>WeedCommerce is a utility token and distribution contract.
+                            Utility Token contract- ERC20, Contract to reward users when they buy products and Integration of contracts
+                        </p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>Shopify, Etherium</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/ethereum.png" alt="">
+                                <img src="./images/latestImages/binance.png" alt="">
+                                <img src="./images/tron.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="next-product" onclick="nextProduct()" id="next-product">
+                    <span id="nxt-btn-txt3">next</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+                <div class="prev-product" onclick="prevProduct()">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span id="prev-btn-txt3">prev page</span>
+                </div>
+
+            </div>
+            <!-- dessert slide ends -->
+
+        </div>
+        <!-- home screen ends -->
+
+    </div>
+    
+    <script src="./js/loadMain.js"></script>
+    <script src="./js/slideOnScroll.js"></script>
+    <script src="./js/numberOnLines.js"></script>
+    <script src="./js/side-nav.js"></script>
+    <script src="./js/slide2Slider.js"></script>
+    <script src="./js/slide3Slider.js"></script>
+    <script src="./js/slide4Slider.js"></script>
+    <script src="./js/contactUs.js"></script>
+    <script src="./js/windowSize.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- script menu open close -->
+    <script>
+        $(document).ready(function(){
+
+            $("#wrapper").click(function(){
+                $(".icon").toggleClass("close");
+                $.fn.myFunction();
+            });
+            $(".secondUl li").click(function(){
+                $(".icon").toggleClass("close");
+                $.fn.myFunction();
+            });
+
+            $.fn.myFunction = function() {
+                if(menuOpen==false){
+                    $(".menu-screen").css("display","block")
+                    $(".menu-screen").removeClass("menu-removed-from-js");
+                    $(".menu-screen").addClass("menu-added-from-js");
+                    $(".navbar-nav").css("opacity","0")
+                    menuOpen =true;
+                    
+                }
+                else{
+                    $(".menu-screen").addClass("menu-removed-from-js");
+                    setTimeout(() => {
+                    $(".navbar-nav").css("opacity","1") 
+                    $(".menu-screen").css("display","none")
+                    }, 900);                
+                    menuOpen = false;
+                }
+            } 
+
+        });      
+    </script>
+
+
+</body>
+</html>
