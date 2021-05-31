@@ -15,22 +15,39 @@
 .ocean-opacity-box1{
     width: 60%;
     height: 63vh;
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     position: absolute;
     top: 0%;
     left: 0%;
     opacity: 0;
     animation: topLeft 1s ease forwards 1s;
+    z-index:1;
+
+    background: rgba(112, 111, 111, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(14, 13, 13, 0.63);
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border-bottom-right-radius: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+    border-right: 1px solid rgba(255, 255, 255, 0.082);
 }
 .ocean-opacity-box2{
     width: 60%;
     height: 63vh;
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     position: absolute;
     bottom: 0%;
     right: 0%;
     opacity: 0;
     animation: bottomRight 1s ease forwards 1s;
+
+    background: rgba(112, 111, 111, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(14, 13, 13, 0.63);
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border-top-left-radius: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.082);
+    border-left: 1px solid rgba(255, 255, 255, 0.082);
 }
 .box1-reverse{
     animation: topLeftAe 1s ease forwards !important;
@@ -105,7 +122,9 @@
     background-color: #fff;
     width: 40px;
     margin-top: 8px;
+    opacity: 0;
     margin-right: 20px;
+    animation: revealimg .5s ease forwards 2.3s;
 }
 .service-info p{
     font-size: 12px;
@@ -120,8 +139,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 1;
-    width: 100px;
-    height: 100px;
+    width: 150px;
     opacity: 0;
     animation: revealimg .5s ease forwards 2.5s;
 }

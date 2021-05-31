@@ -5,6 +5,13 @@ var slide4counter=1;
 var progressWidth=12.5;
 var menuOpen = false;
 var tempp = false;
+var wind_width=window.innerWidth;
+if(wind_width<370){
+    changingSlideTime=1000;
+}
+else{
+    changingSlideTime=3000;
+}
 function loadBody(){
     setTimeout(() => {
         document.getElementById("logo-div").classList.add("logoUp");
@@ -18,6 +25,7 @@ const openHomePage = () => {
     setTimeout(() => {
         document.getElementById("loading-screen").classList.add("slide-left-lscr");
         document.getElementById("intro").style.display="block"
-    }, 3000);
+        document.querySelector(".loading-content").classList.add("d-none");
+    }, changingSlideTime);
     document.getElementById("home-container").style.display="block";
 }

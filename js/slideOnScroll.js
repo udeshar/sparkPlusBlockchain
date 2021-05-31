@@ -394,4 +394,5 @@ function activeNav(){
     for(let i=0;i<abc;i++){
         ab[i].classList.remove("activeNav");
     }
+   
 }

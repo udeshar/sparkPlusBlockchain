@@ -1,5 +1,20 @@
+var onAnimeEnd=document.querySelector('.f-opacity-box');
+onAnimeEnd.addEventListener('animationend', () => {
+    setTimeout(() => {
+         document.querySelector('.crypto-logos').classList.add("slideIcons");
+    }, 1300);
+   
+  });
+function navProgress(sN){
+    var len = document.getElementsByClassName("technology-slider").length;
+    var ans=(sN*100)/len;
+    document.getElementById("navProgress").style.width=ans+"%";
+}
+navProgress(slideNum);
+
 function changeTS(){
-    console.log("hghdgdhdcdcdcdc");
+    var tempSlideNum=slideNum+1;
+    navProgress(tempSlideNum);
     if(slideNum==1){
         document.getElementById("ts1").classList.add("fade_in");
         document.getElementById("ts1").classList.replace("fade_in","fade_out");
@@ -47,16 +62,27 @@ function changeTS(){
         document.getElementById("ts7").classList.replace("fade_in","fade_out");
         // document.getElementById("ts2").classList.add("fade_out");
         document.getElementById("ts8").classList.add("fade_in");
-        document.getElementById("nxt-btn-txt").innerText="next page";
         slideNum=8;
         return;
     }
     if(slideNum==8){
+        document.getElementById("ts8").classList.replace("fade_in","fade_out");
+        // document.getElementById("ts2").classList.add("fade_out");
+        document.getElementById("ts9").classList.add("fade_in");
+        document.getElementById("nxt-btn-txt").innerText="next page";
+        slideNum=9;
+        return;
+    }
+    if(slideNum==9){
         showOcean();
     }
+
+    
 }
 
 function changeTSback(){
+    var tempSlideNum=slideNum-1;
+    navProgress(tempSlideNum);
     if(slideNum==1){
         showIntro();
     }
@@ -67,10 +93,16 @@ function changeTSback(){
         slideNum=1;
         return;
     }
+    if(slideNum==9){
+        document.getElementById("ts9").classList.replace("fade_in","fade_out")
+        document.getElementById("ts8").classList.replace("fade_out","fade_in");
+        document.getElementById("nxt-btn-txt").innerText="next";
+        slideNum=8;
+        return;
+    }
     if(slideNum==8){
         document.getElementById("ts8").classList.replace("fade_in","fade_out")
         document.getElementById("ts7").classList.replace("fade_out","fade_in");
-        document.getElementById("nxt-btn-txt").innerText="next";
         slideNum=7;
         return;
     }

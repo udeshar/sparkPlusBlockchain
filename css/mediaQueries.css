@@ -1,0 +1,400 @@
+@media only screen and (max-width: 370px){
+
+    .lines-container{
+        display: none;
+    }
+    .side-navbar{
+        display: none;
+    }
+    .cont-abt-block{
+        display: none;
+    }
+    .scroll{
+        display: none;
+    }
+
+    /* navbar begins */
+    .navbar-brand img{
+        width: 70%;
+    }
+    /* navbar begins ends*/
+
+    /* intro slide */
+    .statueImage{
+        top: 65%;
+        left: 10%;
+        width: 100%;
+    }
+    .opacity-box{
+        width: 80%;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%,-50%); 
+    }
+    .brand-name p{
+        font-size: 1.5rem;
+    }
+    .brand-desc p{
+        font-size: 10px;
+    }
+    .brand-desc{
+        top: 50%;
+    }
+    .explore-more{
+        font-size: 12px;
+    }
+    .next-arrow1{
+        top: 89.5%;
+        left: 80%;
+        width: 100px;
+    }
+
+    /* intro slide ends */
+
+    /* technology slide */
+    .f-opacity-box{
+        left: 15%;
+    }
+    .forest-name{
+        font-size:1.5rem;
+    }
+    .forest .forest-explore{
+        font-size: 10px;
+    }
+    .forest-info{
+        top: 68%;
+        left: 10%;
+    }
+    .forest-info p{
+        font-size: 12px;
+        width: 75%;
+    }
+    .forest-info div{
+        width: 15px;
+        margin-right: 10px;
+    }
+    .crypto-logos img{
+        display: none !important;
+    }
+    .next-arrow, .prev-arrow{
+        top: 95%;
+        font-size: 11px !important;
+    }
+    .next-arrow{
+        left: 68%;
+    }
+    .forest-name{
+        top: 20%;
+    }
+    .crypto-big-logos{
+        height: 100px;
+        width: 100px;
+        top: 38%;
+        left: 35%;
+    }
+    .forest .slide-name2{
+        top: 85%;
+    }
+    .forest .slide-name2 a{
+        font-size: 11px;
+    }
+    /* technology slide ends */
+
+    /* Services slide  */
+    .ocean-opacity-box1 h3{
+        font-size: 1.2rem;
+    }
+    .ocean-opacity-box1{
+        width: 75%;
+        height: 61vh;
+    }
+    .ocean-opacity-box2{
+        width: 75%;
+        height: 61vh;
+    }
+    .services-txt{
+        top: 14%;
+        left: 60%;
+    }
+    .ocean-opacity-box1 h3{
+        top: 45%;
+    }
+    @keyframes topLeftAe{
+        from{
+            width: 75%;
+            height: 61vh;
+            opacity: 1;
+        }
+        to{
+            height: 0vh;
+            width: 0%;
+            opacity: 0;
+        }
+    }
+    @keyframes bottomRightAe{
+        from{
+            width: 75%;
+            height: 61vh;
+            opacity: 1;
+        }
+        to{
+            height: 0vh;
+            width: 0%;
+            opacity: 0;
+        }
+    }
+    .services-img{
+        width: 100px !important;
+    }
+    #s4-img{
+        height: 70px !important;
+        width: 70px !important;
+    }
+    .service-info{
+        width: 100%;
+        top:68%;
+        left: 45%;
+    }
+    .service-info div{
+        width: 15px;
+    }
+    .service-info p{
+        width: 100%;
+        font-size: 10px;
+    }
+   .s-progress-bar{
+        display: none;
+    }
+    .services-progress{
+        width: auto;
+        top: 93%;
+        left: 5%;
+        right: 5%;
+        transform: translateY(-50%);
+        font-size: 11px;
+    }
+    .s-buttons{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0px;
+    }
+    .services-progress p{
+        margin-bottom: 8px;
+    }
+    .holdPrevBtn{
+        display: none;
+    }
+    .holdNextBtn{
+        display: none;
+    }
+    /* Services slide ends */
+
+    /* portfolio slide  */
+
+    .productBox{
+        width: 80%;
+        height: 80%;
+        left: 50%;
+        top: 51%;
+        animation: productBox 1s ease-out forwards;
+    }
+    .productDesc p{
+        font-size: 11px;
+    }
+    .p-tech-icon img{
+        width: 30px;
+        height: 30px;
+    }
+    .productTitle{
+        top: 25%;
+        transform: translateY(0%);
+        animation: slide4anm1 1s ease-in-out forwards 1s;
+    }
+    .productTitle h3{
+        font-size: 1.5rem;
+        font-weight: bold;
+        animation: slide4anm1Text 1s ease-in-out forwards 1s;
+    }
+    @keyframes slide4anm1{
+        to{
+            top: 3%;
+        }
+    }
+    @keyframes slide4anm1Text{
+        to{
+            font-size: 1rem;
+        }
+    }
+    .productImage{
+        top: 40%;
+        transform: translateY(0%);
+    }
+    @keyframes slide4anm2{
+        to{
+            top: 15%;
+        }
+    }
+    .productImage img{
+        animation: slide4anm2Size 1s ease-in-out forwards 1s;
+        width: 100px !important;
+    }
+    @keyframes slide4anm2Size{
+        to{
+            width: 70px;
+        }
+    }
+    @keyframes slide4anm3{
+        to{
+            top: 35%;
+        }
+    }
+    .productDesc .pd-line{
+        margin: 10px 0px;
+    }
+    .productDesc .tech-used{
+        margin-top: 20px;
+    }
+    .slide-ind{
+        text-align: right;
+    }
+    .slide-name{
+        top: 20%;
+    }
+    .customProductBox .productTitle h3{
+        font-size: 1rem;
+        /* animation: slide4anm12Text .6s ease-in-out forwards .5s; */
+        animation: none;
+    }
+    @keyframes  slide4anm12Text{
+        to{
+            font-size: 1.5rem;
+        }
+    }
+    .customProductBox{
+        animation: productBox2 1.1s ease forwards .3s;
+    }
+    .customProductBox .tech-used{
+        animation: none;
+    }
+    #autobet img{
+        width: 70px;
+    }
+    #solo img{
+        width: 70px;
+    }
+    .customProductBox .productImage img{
+        width: 70px;
+        /* animation: slide4anm12Size .6s ease-in-out forwards .5s; */
+        animation: none;
+    }
+    @keyframes slide4anm12Size {
+        to{
+            width: 100px;
+        }
+    }
+    .customProductBox .productTitle{
+        left: 5%;
+        top: 3%;
+        /* animation: slide4anm12 .6s ease forwards 0.5s; */
+        animation: none;
+    }
+    .customProductBox .productImage{
+        top: 15%;
+        left: 5%;
+        /* animation: slide4anmImg12 .6s ease forwards 0.5s; */
+        animation: none;
+    }
+    @keyframes slide4anm12{
+        to{
+            top: 25%;
+        }
+    }
+    @keyframes slide4anmImg12 {
+        to{
+            top: 40%;
+        }
+    }
+    .customProductBox .productDesc{
+        top:35%;
+        /* animation: slide4anm31 .6s ease-in-out forwards 0.5s; */
+        animation: none;
+    }
+    .next-product{
+        top: 95%;
+        left: 75%;
+        transform: translateY(-50%);
+    }
+    .prev-product{
+        top: 95%;
+        left: 10%;
+        transform: translateY(-50%);
+    }
+    .tech-used p{
+        margin-bottom: 0px;
+    }
+    /* portfolio slide  ends*/
+
+    /* menu screen  */
+    .contact-info{
+        display: none;
+    }
+    .media-box{
+        display: none;
+    }
+    .menu-items{
+        top: 50%;
+        left: 0%;
+        transform: translateY(-50%);
+        width: 80vw;
+    }
+    /* menu screen ends */
+    /* loading screen  */
+    #logo{
+        height: 30px;
+    }
+    .paraNbutton p{
+        font-size: 12px;
+    }
+    .paraNbutton{
+        width: 100%;
+    }
+    .paraNbutton button{
+        font-size: 12px;
+        padding: 6px 25px;
+    }
+    /* loading screen ends */
+
+    /* contact us  */
+    #contactUs{
+        overflow-y: scroll;
+    }
+    .cont-col-2{
+        border-left: none;
+        padding: 20px 0px 20px 10px;
+    }
+    .cont-row{
+        padding: 10px 0px;
+    }
+    .cont-col-1{
+        padding: 20px 0px;
+    }
+    .cont-heading{
+        font-size: 25px;
+    }
+    .cont-small-text{
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+    }
+    .backToHome{
+        position: fixed;
+        top: 5%;
+        left: 80%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+    }
+    .backToHome i{
+        color: #000;
+    }
+    /* contact us ends */
+}

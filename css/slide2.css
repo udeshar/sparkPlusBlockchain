@@ -12,7 +12,16 @@
     left: 40%;
     right: 0%;
     height: 90vh;
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
+
+    background: rgba(112, 111, 111, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(14, 13, 13, 0.63);
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border-bottom-left-radius: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.082);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+
     animation: fOBox 2s ease forwards;
 }
 @keyframes fOBox{
@@ -123,51 +132,30 @@
 .crypto-logos img{
     height: 40px;
     width: 40px;
-    opacity: 0;
+    /* opacity: 0; */
     margin: 0px 15px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
     
 }
 @keyframes logoFromLeft{
-    0%{
-        opacity: 0;
-        transform: translateX(1000%);
-    }
-    100%{
-        opacity: 1;
+    to{
         transform: translateX(0%);
+        opacity: 1;
+        /* left: 10%; */
     }
-}
-.crypto-logos :nth-child(1){
-    animation: logoFromLeft 1s ease forwards 2s;
-}
-.crypto-logos :nth-child(2){
-    animation: logoFromLeft 1s ease forwards 2.3s;
-}
-.crypto-logos :nth-child(3){
-    animation: logoFromLeft 1s ease forwards 2.6s;
-}
-.crypto-logos :nth-child(4){
-    animation: logoFromLeft 1s ease forwards 2.9s;
-}
-.crypto-logos :nth-child(5){
-    animation: logoFromLeft 1s ease forwards 3.2s;
-}
-.crypto-logos :nth-child(6){
-    animation: logoFromLeft 1s ease forwards 3.5s;
-}
-.crypto-logos :nth-child(7){
-    animation: logoFromLeft 1s ease forwards 3.8s;
-}
-.crypto-logos :nth-child(8){
-    animation: logoFromLeft 1s ease forwards 4.1s;
 }
 .crypto-logos{
     position: absolute;
+    width: 100% !important;
     bottom: 5%;
     left: 10%;
-    
+    transform: translateX(20%);
+    opacity: 0;
+    /* animation: logoFromLeft 1.5s ease-out forwards 4s; */
+}
+.slideIcons{
+    animation: logoFromLeft 1s ease-out forwards;
 }
 .crypto-big-logos{
     height: 230px;

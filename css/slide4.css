@@ -13,7 +13,7 @@
     display: none;
     width: 28%;
     height: 80%;
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     position: absolute;
     left: 70%;
     top: 50%;
@@ -21,11 +21,21 @@
     padding: 40px 20px;
     animation: productBox 1.3s ease forwards;
     /* overflow: hidden; */
+
+    background: rgba(112, 111, 111, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(14, 13, 13, 0.63);
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.082);
 }
 @keyframes productBox{
     from{
         left: 130%;
     }
+}
+#solo img{
+    width: 150px;
 }
 .productTitle{
     position: absolute;
@@ -34,11 +44,8 @@
     width: 100%;
     transform: translateY(-50%);
     animation: slide4anm1 1s ease-in-out forwards 1s;
-}
-.productTitle h3{
     font-size: 2.5rem;
     font-weight: bold;
-    /* text-transform: uppercase; */
 }
 .productImage{
     position: absolute;
@@ -46,6 +53,9 @@
     left: 5%;
     transform: translateY(-50%);
     animation: slide4anm2 1s ease-in-out forwards 1.3s;
+}
+.productImage img{
+    filter: drop-shadow(1px 1px 15px rgb(22, 22, 22));
 }
 .productDesc{
     font-size: 14px;
@@ -65,7 +75,7 @@
 .productDesc .pd-line{
     height: 1px;
     width: 40px;
-    margin: 20px 0px;
+    margin: 15px 0px;
     background-color: #fff;
 }
 .productDesc .tech-used{
@@ -157,4 +167,7 @@
     to{
         opacity: 0;
     }
+}
+#autobet img{
+    width: 150px;
 }

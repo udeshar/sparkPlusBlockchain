@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="./css/slide2.css">
     <link rel="stylesheet" href="./css/slide3.css">
     <link rel="stylesheet" href="./css/slide4.css">
+    <link rel="stylesheet" href="./css/contactUs.css">
     <link rel="stylesheet" href="./css/menuScreen.css">
+    <link rel="stylesheet" href="./css/mediaQueries.css">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -27,7 +29,51 @@
 
 </head>
 <body onload="loadBody()">
-    <div class="whole-container">
+    <div class="whole-container" id="whole-container">
+
+        <div id="contactUs" class="d-none" style="min-height: 100vh;">
+                <div class="backToHome text-light cont-slide-up" style="opacity: 0;" id="backToHome">
+                    <i class="fa fa-angle-left m-0 p-0" aria-hidden="true"></i>
+                    <i class="fa fa-angle-left m-0 p-0 " aria-hidden="true"></i>
+                </div>
+            
+            <div class="cont-wrapper">
+                <p class="cont-heading cont-slide-up">Contact Us</p>
+                <div class="row cont-row">
+                    <div class="col-md-6 d-flex justify-content-center cont-slide-up cont-col-1" style="flex-direction: column;opacity: 0;">
+                        <p class="cont-small-text" style="width: 85%;">Connect with us to know each other's journey, explore possibilities to grow together. We would like to be a part of your journey.</p>
+                        <p class="cont-small-text">You can also get in touch with us</p>
+                        <p class="cont-small-text font-weight-bold">hello@sparkplustech.com</p>
+                        <p class="cont-small-text font-weight-bold">+1 602-314-0425 (US)</p>
+                        <div class="d-flex cont-media">
+                            <a href="https://www.facebook.com/sparkplustech/"><i class="fa fa-facebook pr-3" aria-hidden="true"></i></a>
+                            <a href="https://in.linkedin.com/company/sparkplustech"><i class="fa fa-linkedin pr-3" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/sparkplustech"><i class="fa fa-twitter pr-3" aria-hidden="true"></i></a>
+                            <a href="https://medium.com/@SparkPlusTech"><i class="fa fa-medium pr-3" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 cont-slide-up cont-col-2 pl-lg-3">
+                        <form action="" method="post" id="cont-form" class="cont-small-text">
+                            <div>
+                                <label for="fullName">Full Name</label>
+                                <input type="text" name="fullName" id="fullName">
+                            </div>
+                            <div>
+                                <label for="email">Email Address</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div>
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="3"></textarea>
+                            </div>
+                            <div>
+                                <input type="submit" value="SEND" class="submitButton">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Loading Screen Begins -->
         <div class="loading-screen" id="loading-screen">
@@ -69,12 +115,13 @@
             <!-- navbar begins -->
             <nav class="navbar navbar-expand-md text-light fixed-top">
                 <a class="navbar-brand text-animation-udesh" href="#">
-                    <span class="letter1">S</span>
+                    <!-- <span class="letter1">S</span>
                     <span class="letter2">p</span>
                     <span class="letter3">a</span>
                     <span class="letter4">r</span>
                     <span class="letter5">k</span>
-                    <span class="letter6">+</span>
+                    <span class="letter6">+</span> -->
+                    <img src="./images/latestImages/SparkPlus_Whitelogosmall.png" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -89,7 +136,9 @@
                                 <span class="letter4">r</span>
                                 <span class="letter5">o</span>
                             </a>
-                            <div class="nav__underline activeNav"></div>
+                            <div class="nav__underline activeNav">
+                                <div class="navProgress" style="background-color: #fff; width: 100%;"></div>
+                            </div>
                         </li>
                         <li class="nav-item" onclick="showForest()">
                             <a class="nav-link text-animation-udesh" href="#">
@@ -105,7 +154,7 @@
                                 <span class="letter6">y</span>
                             </a>
                             <div class="nav__underline">
-                                <div class="navProgress"></div>
+                                <div class="navProgress" id="navProgress"></div>
                             </div>
                         </li>
                         <li class="nav-item" onclick="showOcean()">
@@ -119,7 +168,9 @@
                                 <span class="letter5">e</span>
                                 <span class="letter5">s</span>
                             </a>
-                            <div class="nav__underline"></div>
+                            <div class="nav__underline">
+                                <div class="navProgress" id="navProgress2"></div>
+                            </div>
                         </li>    
                         <li class="nav-item" onclick="showDessert()">
                             <a class="nav-link text-animation-udesh" href="#">
@@ -130,10 +181,12 @@
                                 <span class="letter5">f</span>
                                 <span class="letter6">o</span>
                                 <span class="letter7">l</span>
-                                <span class="letter8">i</span>
-                                <span class="letter8">o</span>
+                                <span class="letter7">i</span>
+                                <span class="letter7">o</span>
                             </a>
-                            <div class="nav__underline"></div>
+                            <div class="nav__underline">
+                                <div class="navProgress" id="navProgress3"></div>
+                            </div>
                         </li>    
                     </ul>
                 </div>  
@@ -187,7 +240,7 @@
             <!-- contact us and about us begins -->
             <div class="cont-abt-block">
                 <div class="contact">
-                    <a href="" class="text-animation-udesh">
+                    <a class="text-animation-udesh" id="contactUsBtn">
                         <span class="letter1">C</span>
                         <span class="letter2">o</span>
                         <span class="letter3">n</span>
@@ -232,47 +285,49 @@
                         <ul class="secondUl">
                             <li onclick="showIntro()">
                                 <div></div>
-                                <a href="#">Intro</a>
+                                <a href="#" class="menu-it active-menu-screen">Intro</a>
                             </li>
                             <li onclick="showForest()">
                                 <div></div>
-                                <a href="#">Technology</a>
+                                <a href="#" class="menu-it">Technology</a>
                             </li>
                             <li onclick="showOcean()">
                                 <div></div>
-                                <a href="#">Services</a>
+                                <a href="#" class="menu-it">Services</a>
                             </li>
                             <li onclick="showDessert()">
                                 <div></div>
-                                <a href="#">Portfolio</a>
+                                <a href="#" class="menu-it">Portfolio</a>
                             </li>
                         </ul>
-                        <li><a href="#">Contact us</li></a>
+                        <li><a onclick="gotocontact(1)">Contact us</li></a>
                         <li><a href="#">About us</li></a>
                     </ul>
                 </div>
                 <div class="contact-info">
-                    <div class="d-flex">
+                    <div class="d-flex mr-4" onclick="gotocontact(1)" style="cursor: pointer;">
                         <i class="fa fa-phone" aria-hidden="true"></i>
                         <span class="ml-2">Call us</span>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex" onclick="gotocontact(1)" style="cursor: pointer;">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                         <span class="ml-2">Leave a message</span>
                     </div>
                     
                 </div>
                 <div class="media-box">
-                    <a href=""><div class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>
-                    <a href=""><div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div></a>
-                    <a href=""><div class="tw"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>
-                    <a href=""><div class="git"><i class="fa fa-github" aria-hidden="true"></i></div></a>
+                    <a href="https://www.facebook.com/sparkplustech/"><div class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>
+                    <a href="https://in.linkedin.com/company/sparkplustech"><div class="linked"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a>
+                    <a href="https://twitter.com/sparkplustech"><div class="tw"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>
+                    <a href="https://medium.com/@SparkPlusTech"><div class="med"><i class="fa fa-medium" aria-hidden="true"></i></div></a>
                 </div>
             </div>
             <!-- menu screen close -->
 
             <!-- intro slide begins -->
             <div class="intro" id="intro">
+
+                <img src="./images/statue.png" alt="statue of blockchain" class="statueImage">
 
                 <div class="opacity-box">
                     <div class="opacity-inside-box"></div>
@@ -315,79 +370,88 @@
                 <div class="f-opacity-box">
 
                     <div class="technology-slider ts1" id="ts1">
-                        <img class="crypto-big-logos" src="./images/portis.png" alt="portis" style="-webkit-filter: drop-shadow(5px 5px 5px #222);filter: drop-shadow(5px 5px 20px rgb(18, 84, 88));">
-                        <p class="forest-name">Portis</p>
-                        <div class="forest-info">
-                            <div></div>
-                            <p>The Non-Custodial Blockchain Wallet that Makes Apps Simple for Everyone</p>
-                        </div>
-                    </div>
-                    <div class="technology-slider ts2" id="ts2">
-                        <img class="crypto-big-logos" src="./images/loom2.png" alt="portis" style="-webkit-filter: drop-shadow(5px 5px 5px #023842);filter: drop-shadow(5px 5px 20px #023842);">
-                        <p class="forest-name">Loom Network</p>
-                        <div class="forest-info">
-                            <div></div>
-                            <p>The Production-ready, Multichain Interop Platform for Serious Dapp Developers</p>
-                        </div>
-                    </div>
-                    <div class="technology-slider ts3" id="ts3">
-                        <img class="crypto-big-logos" src="./images/ethereum.png" alt="portis" style="-webkit-filter: drop-shadow(5px 5px 5px #343434);filter: drop-shadow(5px 5px 20px #343434);">
+                        <img class="crypto-big-logos" src="./images/ethereum.png" alt="etherium" style="-webkit-filter: drop-shadow(5px 5px 5px #343434);filter: drop-shadow(5px 5px 20px #343434);">
                         <p class="forest-name">Etherium</p>
                         <div class="forest-info">
                             <div></div>
                             <p>A decentralized public platform that runs dApps</p>
                         </div>
                     </div>
-                    <div class="technology-slider ts4" id="ts4">
-                        <img class="crypto-big-logos" src="./images/stella.png" alt="portis" style="-webkit-filter: drop-shadow(5px 5px 5px #333333);filter: drop-shadow(5px 5px 20px #333333);">
-                        <p class="forest-name">Stellar</p>
+                    <div class="technology-slider ts2" id="ts2">
+                        <img class="crypto-big-logos" src="./images/latestImages/hyperledger.png" alt="Hyperledger" style="-webkit-filter: drop-shadow(1px 1px 15px #7b7b7b);filter: drop-shadow(1px 1px 15px #7b7b7b);">
+                        <p class="forest-name">Hyperledger</p>
                         <div class="forest-info">
                             <div></div>
-                            <p>Stellar is an open platform for building financial products that connect people everywhere</p>
+                            <p>An open source community focused on developing a suite of stable frameworks, tools and libraries for enterprise-grade blockchain deployments.</p>
+                        </div>
+                    </div>
+                    <div class="technology-slider ts3" id="ts3">
+                        <img class="crypto-big-logos" src="./images/latestImages/Polkadot logo-02.png" alt="Palkadot" style="-webkit-filter: drop-shadow(1px 1px 15px rgb(167, 167, 167));filter: drop-shadow(1px 1px 15px rgb(167, 167, 167));">
+                        <p class="forest-name">Palkadot</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>Track to deliver the most robust platform for security, scalability and innovation.</p>
+                        </div>
+                    </div>
+                    <div class="technology-slider ts4" id="ts4">
+                        <img class="crypto-big-logos" src="./images/latestImages/matic-network.svg" alt="Matic" style="-webkit-filter: drop-shadow(1px 1px 15px #1b5ea1);filter: drop-shadow(1px 1px 15px #1b5ea1);">
+                        <p class="forest-name">Matic</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>Massive scale to Ethereum using an adapted version of Plasma with PoS based side chains.</p>
                         </div>
                     </div>
                     <div class="technology-slider ts5" id="ts5">
-                        <img class="crypto-big-logos" src="./images/corda.png" alt="portis" style="-webkit-filter: drop-shadow(5px 5px 5px #811515);filter: drop-shadow(5px 5px 20px #811515);">
-                        <p class="forest-name">Corda</p>
+                        <img class="crypto-big-logos" src="./images/latestImages/dragonchain-drgn-logo.png" alt="Dragonchain" style="-webkit-filter: drop-shadow(1px 1px 15px #005099);filter: drop-shadow(1px 1px 15px #005099);">
+                        <p class="forest-name">Dragonchain</p>
                         <div class="forest-info">
                             <div></div>
-                            <p>Corda is an open source blockchain platform for businesses</p>
+                            <p>Platform to build flexible and scalable blockchain applications.</p>
                         </div>
                     </div>
                     <div class="technology-slider ts6" id="ts6">
-                        <img class="crypto-big-logos" src="./images/eos.png" alt="portis" style="-webkit-filter: drop-shadow(5px 5px 5px rgb(36, 36, 36));filter: drop-shadow(5px 5px 20px rgb(34, 34, 34));">
-                        <p class="forest-name">EOS</p>
+                        <img class="crypto-big-logos" src="./images/latestImages/binance.png" alt="Binance" style="-webkit-filter: drop-shadow(1px 1px 15px #97751f);filter: drop-shadow(1px 1px 15px #97751f);">
+                        <p class="forest-name">Binance</p>
                         <div class="forest-info">
                             <div></div>
-                            <p>EOS is a decentralized blockchain, which can process fast and free transactions</p>
+                            <p>Binance is a Cayman Islands-domiciled cryptocurrency exchange that provides a platform for trading various cryptocurrencies</p>
                         </div>
                     </div>
                     <div class="technology-slider ts7" id="ts7">
-                        <img class="crypto-big-logos" src="./images/tron.png" alt="portis" style="-webkit-filter: drop-shadow(5px 5px 5px #811515);filter: drop-shadow(5px 5px 20px #811515);">
-                        <p class="forest-name">Tron</p>
+                        <img class="crypto-big-logos" src="./images/latestImages/substrate.png" alt="Substrate" style="-webkit-filter: drop-shadow(1px 1px 15px #fff);filter: drop-shadow(1px 1px 15px #fff);">
+                        <p class="forest-name">Substrate</p>
                         <div class="forest-info">
                             <div></div>
-                            <p>A decentralized platform to develop high-performance blockchain apps</p>
+                            <p>Substrate is a modular framework that enables you to create purpose-built blockchains by composing custom or pre-built components.</p>
                         </div>
                     </div>
                     <div class="technology-slider ts8" id="ts8">
-                        <img class="crypto-big-logos" src="./images/hashgraph.png" alt="portis" style="-webkit-filter: drop-shadow(5px 5px 5px rgb(56, 54, 54));filter: drop-shadow(5px 5px 20px rgb(56, 54, 54));">
-                        <p class="forest-name">Hashgraph</p>
+                        <img class="crypto-big-logos" src="./images/latestImages/chainlink-link-logo.png" alt="Chainlink" style="-webkit-filter: drop-shadow(1px 1px 15px #1d3c92);filter: drop-shadow(1px 1px 15px #1d3c92);">
+                        <p class="forest-name">Chainlink</p>
                         <div class="forest-info">
                             <div></div>
-                            <p>Fair, Fast and most secured acrylic graph DLT</p>
+                            <p>Chainlink's decentralized oracle network provides reliable, tamper-proof inputs and outputs for complex smart contracts on any blockchain.</p>
+                        </div>
+                    </div>
+                    <div class="technology-slider ts9" id="ts9">
+                        <img class="crypto-big-logos" src="./images/latestImages/oxcert.svg" alt="Oxcert" style="-webkit-filter: drop-shadow(1px 1px 15px #003988);filter: drop-shadow(1px 1px 15px #003988);">
+                        <p class="forest-name">Oxcert</p>
+                        <div class="forest-info">
+                            <div></div>
+                            <p>Build decentralized apps using fungible and non-fungible tokens quickly, cost efficiently and securely.</p>
                         </div>
                     </div>
                     
                     <div class="crypto-logos">
-                        <img src="./images/portis.png" alt="Portis png logo">
-                        <img src="./images/loom2.png" alt="loom png logo">
                         <img src="./images/ethereum.png" alt="etherium png logo">
-                        <img src="./images/stella.png" alt="stellar png logo">
-                        <img src="./images/corda.png" alt="corda png logo">
-                        <img src="./images/eos.png" alt="etherium png logo">
-                        <img src="./images/tron.png" alt="tron png logo">
-                        <img src="./images/hashgraph.png" alt="hashgraph png logo">
+                        <img src="./images/latestImages/hyperledger.png" alt="hyperledger png logo">
+                        <img src="./images/latestImages/Polkadot logo-02.png" alt="palkadot png logo">
+                        <img src="./images/latestImages/matic-network.svg" alt="matic png logo">
+                        <img src="./images/latestImages/dragonchain-drgn-logo.png" alt="dragonchain png logo">
+                        <img src="./images/latestImages/binance.png" alt="binance png logo">
+                        <img src="./images/latestImages/substrate.png" alt="substrate png logo">
+                        <img src="./images/latestImages/chainlink-link-logo.png" alt="chainlink png logo">
+                        <img src="./images/latestImages/oxcert.svg" alt="oxcert png logo">
                     </div>
 
                     <div class="next-arrow" onclick="changeTS()" id="nxtBtn">
@@ -417,111 +481,72 @@
 
                     <div class="services-slide s1" id="s1">
                         <div class="ocean-opacity-box1" id="s1tl">
-                            <h3 id="s-h3-1">Blockchain Technology Consulting</h3>
+                            <h3 id="s-h3-1">Tokenization</h3>
                         </div>
-                        <img src="./images/services/consulting.png" alt="blockchain consulting" class="services-img" id="s1-img">
+                        <img src="./images/latestImages/token1.gif" alt="Tokenization" class="services-img" id="s1-img">
                         <div class="ocean-opacity-box2" id="s1br">
                             <div class="service-info">
-                                <div></div>
-                                <p id="s-p-1">Our approach to blockchain technology consulting begins with what, why and how blockchain can benefit your enterprise solution with its capability to bring trust and transparency..</p>
+                                <div id="sercices-lineBeforeP1"></div>
+                                <p id="s-p-1">Tokenization is the first step towards entering into decentralized finance. SPARK+ takes care of your token journey by building a range of platforms which enables to launch, distribute and manage your token economy.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="services-slide s2" id="s2">
                         <div class="ocean-opacity-box1" id="s2tl">
-                            <h3 id="s-h3-2">Blockchain Supply Chain Development</h3>
+                            <h3 id="s-h3-2">Decentralized Finance</h3>
                         </div>
-                        <img src="./images/services/truck.png" alt="blockchain consulting" class="services-img" id="s2-img">
+                        <img src="./images/latestImages/decentralized1-unscreen.gif" alt="Decentralized Finance" class="services-img" id="s2-img">
                         <div class="ocean-opacity-box2" id="s2br">
                             <div class="service-info">
-                                <div></div>
-                                <p id="s-p-2">We can develop, deploy and manage supply chain solutions for various industries using blockchain technology which offers complete transparency at every step of the product’s journey.</p>
+                                <div id="sercices-lineBeforeP2"></div>
+                                <p id="s-p-2">Decentralized finance refers to the shift from centralized financial systems to peer-to-peer finance. SPARK+ helps you to build interconnected financial ecosystems where each one has the opportunity to grow with the fluctuations in supply and demand.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="services-slide s3" id="s3">
                         <div class="ocean-opacity-box1" id="s3tl">
-                            <h3 id="s-h3-3">Smart Contracts</h3>
+                            <h3 id="s-h3-3">Blockchain Network Development</h3>
                         </div>
-                        <img src="./images/services/smart-contract1.png" alt="blockchain consulting" class="services-img" id="s3-img">
+                        <img src="./images/latestImages/api1-unscreen.gif" alt="Blockchain Network Development" class="services-img" id="s3-img">
                         <div class="ocean-opacity-box2" id="s3br">
                             <div class="service-info">
-                                <div></div>
-                                <p id="s-p-3">Our team of smart contract developers who can develop and deploy smart contracts for public and private blockchain networks. We have built smart contracts for crowdfunding, blockchain supply chain solutions and various dApps.</p>
+                                <div id="sercices-lineBeforeP3"></div>
+                                <p id="s-p-3">The technology is in early state but SPARK+ is here to helps you to build a custom blockchain with your own rules, protocols(POA,POS,POW) and EVM combinations with interoperable advanced platforms such as polkadot, Cosmos, multichain, Wanchain.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="services-slide s4" id="s4">
                         <div class="ocean-opacity-box1" id="s4tl">
-                            <h3 id="s-h3-4">Wallet Development</h3>
+                            <h3 id="s-h3-4">dApps Development</h3>
                         </div>
-                        <img src="./images/services/wallet1.png" alt="blockchain consulting" class="services-img" id="s4-img">
+                        <img src="./images/services/dapp1.png" alt="blockchain consulting" class="services-img" id="s4-img">
                         <div class="ocean-opacity-box2" id="s4br">
                             <div class="service-info">
-                                <div></div>
-                                <p id="s-p-4">With blockchain skills and knowledge, our blockchain developers can develop wallet dApps which can hold a wide array of digital assets and currencies and offer the ability to check balance and track history.</p>
+                                <div id="sercices-lineBeforeP4"></div>
+                                <p id="s-p-4">From ideation to design and development, our blockchain developers can build enterprise-grade decentralized applications (dApps) to help clients accelerate time to market and maximize ROI.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="services-slide s5" id="s5">
                         <div class="ocean-opacity-box1" id="s5tl">
-                            <h3 id="s-h3-5">dApps Development</h3>
+                            <h3 id="s-h3-5">Entreprise App Solutions</h3>
                         </div>
-                        <img src="./images/services/dapp1.png" alt="blockchain consulting" class="services-img" id="s5-img">
+                        <img src="./images/latestImages/solution1-unscreen.gif" alt="Entreprise App Solutions" class="services-img" id="s5-img">
                         <div class="ocean-opacity-box2" id="s5br">
                             <div class="service-info">
-                                <div></div>
-                                <p id="s-p-5">From ideation to design and development, our blockchain developers can build enterprise-grade decentralized applications (dApps) to help clients accelerate time to market and maximize ROI.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="services-slide s6" id="s6">
-                        <div class="ocean-opacity-box1" id="s6tl">
-                            <h3 id="s-h3-6">Custom Blockchain Development</h3>
-                        </div>
-                        <img src="./images/services/custom-blockchain1.png" alt="blockchain consulting" class="services-img" id="s6-img">
-                        <div class="ocean-opacity-box2" id="s6br">
-                            <div class="service-info">
-                                <div></div>
-                                <p id="s-p-6">With expertise in multiple blockchain platforms, including Hyperledger, Corda, Tron, Stellar and EOS, we build scalable and robust custom blockchain solutions for enterprises and startups.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="services-slide s7" id="s7">
-                        <div class="ocean-opacity-box1" id="s7tl">
-                            <h3 id="s-h3-7">Decentralized Exchange</h3>
-                        </div>
-                        <img src="./images/services/decentralize1.png" alt="blockchain consulting" class="services-img" id="s7-img">
-                        <div class="ocean-opacity-box2" id="s7br">
-                            <div class="service-info">
-                                <div></div>
-                                <p id="s-p-7">Our blockchain development team can create a hack-proof and robust platform on Android and/or iOS and Web platform which allows the real-time exchange of digital currencies securely and efficiently.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="services-slide s8" id="s8">
-                        <div class="ocean-opacity-box1" id="s8tl">
-                            <h3 id="s-h3-8">Tokenization</h3>
-                        </div>
-                        <img src="./images/services/token1.png" alt="blockchain consulting" class="services-img" id="s8-img">
-                        <div class="ocean-opacity-box2" id="s8br">
-                            <div class="service-info">
-                                <div></div>
-                                <p id="s-p-8">Tokenization can eliminate volatility and bring more liquidity to a wide array of assets. Therefore, our blockchain development team can help you tokenize any asset you want, ensuring trust, transparency and efficiency.</p>
+                                <div id="sercices-lineBeforeP5"></div>
+                                <p id="s-p-5">We harness the potential of varied Blockchain platforms to deliver innovative enterprise grade blockchain solutions, understand enterprise needs and privacy. Blockchain can take your process automation to the next level with it’s decentralised and secure infrastructure.</p>
                             </div>
                         </div>
                     </div>
 
 
                     <div class="services-progress">
-                        <p><span id="s-slideNum">1</span>/8</p>
+                        <p><span id="s-slideNum">1</span>/5</p>
                         <div class="s-progress-bar">
                             <div id="s-ProgressBar"></div>
                         </div>
@@ -564,68 +589,67 @@
             <div class="dessert">
 
                 <div class="productBox activeOwn" id="productBox">
-                    <p class="slide-ind">1/5</p>
+                    <p class="slide-ind">1/9</p>
                     <div class="productTitle">
-                        <h3>Online Lottery System</h3>
+                        <h3>Sparkland</h3>
                     </div>
-                    <div class="productImage">
-                        <img src="./images/sparklottery.png" alt="Sparkplus lottery image">
+                    <div class="productImage" id="sparkland">
+                        <img src="./images/sparkland.png" alt="Sparkland ">
                     </div>
                     <div class="productDesc">
                         <div class="pd-line"></div>
-                        <p>Online lottery is a system which is designed to bring transparency in paper-based gambling & lottery system using blockchain technology.</p>
+                        <p>A place for everyone to light-up, team-up, and start-up what you want to create.Share your spark story. Invite others for networking, brainstorming, and research.</p>
                         <div class="tech-used">
                             <h3>Technology Used</h3>
                             <div class="pd-line"></div>
-                            <p>Etherium, JavaScript</p>
+                            <p>React Native, NodeJs</p>
                             <div class="p-tech-icon">
-                                <img src="./images/ethereum.png" alt="">
-                                <img src="./images/js.png" alt="">
+                                <img src="./images/reactjs.png" alt="">
+                                <img src="./images/nodejs.png" alt="">
                             </div>
                         </div>                       
                     </div>
                     <!-- slide name begins -->
                     <div class="slide-name">
-                        <a href="">Intro</a>
+                        <a href="">Portfolio</a>
                         <div></div>
                     </div>
                     <!-- slide name ends -->
                 </div>
 
                 <div class="productBox" id="productBox2">
-                    <p class="slide-ind">2/5</p>
+                    <p class="slide-ind">2/9</p>
                     <div class="productTitle">
-                        <h3>Startup Regestration Platform</h3>
+                        <h3>Autobet gaming ecosystem</h3>
                     </div>
 
-                    <div class="productImage">
-                        <img src="./images/LLP Logo big.png" alt="Sparkplus lottery image">
+                    <div class="productImage" id="autobet">
+                        <img src="./images/latestImages/autobet.png" alt="Autobet">
                     </div>
 
                     <div class="productDesc">
                         <div class="pd-line"></div>
-                        <p>Startx is a Blockchain-based solution to incorporate, modify and verify LLP online. Bring transparency and trust.</p>
+                        <p>To build a unique blockchain based lottery platform. The vision of the project is to build an ecosystem of transparent lottery and DeFi services together.</p>
                         <div class="tech-used">
                             <h3>Technology Used</h3>
                             <div class="pd-line"></div>
-                            <p>Etherium, ReactJs</p>
+                            <p>Blockchain</p>
                             <div class="p-tech-icon">
                                 <img src="./images/ethereum.png" alt="">
-                                <img src="./images/reactjs.png" alt="">
                             </div>
                         </div>
                         
                     </div>
                     <!-- slide name begins -->
                     <div class="slide-name">
-                        <a href="">Intro</a>
+                        <a href="">Portfolio</a>
                         <div></div>
                     </div>
                     <!-- slide name ends -->
                 </div>
 
                 <div class="productBox" id="productBox3">
-                    <p class="slide-ind">3/5</p>
+                    <p class="slide-ind">3/9</p>
                     <div class="productTitle">
                         <h3>Cryptochrome</h3>
                     </div>
@@ -649,72 +673,207 @@
                     </div>
                     <!-- slide name begins -->
                     <div class="slide-name">
-                        <a href="">Intro</a>
+                        <a href="">Portfolio</a>
                         <div></div>
                     </div>
                     <!-- slide name ends -->
                 </div>
 
                 <div class="productBox" id="productBox4">
-                    <p class="slide-ind">4/5</p>
+                    <p class="slide-ind">4/9</p>
                     <div class="productTitle">
-                        <h3>Diamond Supply Chain</h3>
+                        <h3>SOLO</h3>
                     </div>
 
-                    <div class="productImage">
-                        <img src="./images/diamond.png" alt="Sparkplus lottery image">
+                    <div class="productImage" id="solo">
+                        <img src="./images/latestImages/Group 2 (1).png" alt="Sparkplus lottery image">
                     </div>
 
                     <div class="productDesc">
                         <div class="pd-line"></div>
-                        <p>The diamond industry involves manufacturer, supplier and logistic partner. we provide better visibility to the consumer throughout the entire supply chain</p>
+                        <p>A platform, connecting education , practical training  & potential employment opportunity that sets up for a career path.
+                            </p>
                         <div class="tech-used">
                             <h3>Technology Used</h3>
                             <div class="pd-line"></div>
-                            <p>Etherium, ReactJs</p>
+                            <p>ReactJs, Javascript</p>
                             <div class="p-tech-icon">
-                                <img src="./images/ethereum.png" alt="">
                                 <img src="./images/reactjs.png" alt="">
+                                <img src="./images/js.png" alt="">
                             </div>
                         </div>
                         
                     </div>
                     <!-- slide name begins -->
                     <div class="slide-name">
-                        <a href="">Intro</a>
+                        <a href="">Portfolio</a>
                         <div></div>
                     </div>
                     <!-- slide name ends -->
                 </div>
 
                 <div class="productBox" id="productBox5">
-                    <p class="slide-ind">5/5</p>
+                    <p class="slide-ind">5/9</p>
                     <div class="productTitle">
-                        <h3>Sparkland</h3>
+                        <h3>Sparklottery</h3>
                     </div>
 
                     <div class="productImage">
-                        <img src="./images/sparkland.png" alt="Sparkplus lottery image">
+                        <img src="./images/sparklottery.png" alt="Spark lottery image">
                     </div>
 
                     <div class="productDesc">
                         <div class="pd-line"></div>
-                        <p>A place for everyone to light-up, team-up, and start-up what you want to create.Share your spark story. Invite others for networking, brainstorming, and research.
+                        <p>Online lottery is a system which is designed to bring transparency in paper-based gambling & lottery system using blockchain technology.
                         </p>
                         <div class="tech-used">
                             <h3>Technology Used</h3>
                             <div class="pd-line"></div>
-                            <p>React Native, NodeJs</p>
+                            <p>Etherium, Javascript</p>
                             <div class="p-tech-icon">
-                                <img src="./images/reactjs.png" alt="">
-                                <img src="./images/nodejs.png" alt="">
+                                <img src="./images/ethereum.png" alt="">
+                                <img src="./images/js.png" alt="">
                             </div>
                         </div>
                         
                     </div>
                     <!-- slide name begins -->
                     <div class="slide-name">
-                        <a href="">Intro</a>
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox6">
+                    <p class="slide-ind">6/9</p>
+                    <div class="productTitle">
+                        <h3>Simplacity</h3>
+                    </div>
+
+                    <div class="productImage">
+                        <img src="./images/latestImages/simplacityIllus.png" alt="Spark lottery image">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>The SimplaCity ID Service enables the consumer to control the release, use and monetization of PII. It is available for any software to access via API and blockchain proofs/access logs
+                        </p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>Dragonchain</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/latestImages/dragonchain-drgn-logo.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox7">
+                    <p class="slide-ind">7/9</p>
+                    <div class="productTitle">
+                        <h3>
+                            Smart ballots</h3>
+                    </div>
+
+                    <div class="productImage">
+                        <img src="./images/latestImages/smartBallot.png" alt="Spark lottery image">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>Smart Ballot will be transparent voting system build on hybrid blockchain (Dragonchain) to take voting process at another level
+                        </p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>Blockchain</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/ethereum.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox8">
+                    <p class="slide-ind">8/9</p>
+                    <div class="productTitle">
+                        <h3>NFT Marketplace</h3>
+                    </div>
+
+                    <div class="productImage">
+                        <img src="./images/latestImages/nft.png" alt="Spark lottery image">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>ERC 721 non-fungible tokens and Asset management. 0xcert to build decentralized apps and The POC creates certificates and assets which are transferable and redeemable.
+                        </p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>Oxcert, ReactJs, Etherium</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/latestImages/oxcert.svg" alt="">
+                                <img src="./images/reactjs.png" alt="">
+                                <img src="./images/ethereum.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
+                        <div></div>
+                    </div>
+                    <!-- slide name ends -->
+                </div>
+
+                <div class="productBox" id="productBox9">
+                    <p class="slide-ind">9/9</p>
+                    <div class="productTitle">
+                        <h3>Weedcommerce</h3>
+                    </div>
+
+                    <div class="productImage">
+                        <img src="./images/latestImages/weedcommerce.png" alt="Spark lottery image">
+                    </div>
+
+                    <div class="productDesc">
+                        <div class="pd-line"></div>
+                        <p>WeedCommerce is a utility token and distribution contract.
+                            Utility Token contract- ERC20, Contract to reward users when they buy products and Integration of contracts
+                        </p>
+                        <div class="tech-used">
+                            <h3>Technology Used</h3>
+                            <div class="pd-line"></div>
+                            <p>Shopify, Etherium</p>
+                            <div class="p-tech-icon">
+                                <img src="./images/ethereum.png" alt="">
+                                <img src="./images/latestImages/binance.png" alt="">
+                                <img src="./images/tron.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- slide name begins -->
+                    <div class="slide-name">
+                        <a href="">Portfolio</a>
                         <div></div>
                     </div>
                     <!-- slide name ends -->
@@ -738,6 +897,7 @@
         <!-- home screen ends -->
 
     </div>
+    
     <script src="./js/loadMain.js"></script>
     <script src="./js/slideOnScroll.js"></script>
     <script src="./js/numberOnLines.js"></script>
@@ -745,6 +905,8 @@
     <script src="./js/slide2Slider.js"></script>
     <script src="./js/slide3Slider.js"></script>
     <script src="./js/slide4Slider.js"></script>
+    <script src="./js/contactUs.js"></script>
+    <script src="./js/windowSize.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- script menu open close -->
     <script>
@@ -761,6 +923,7 @@
 
             $.fn.myFunction = function() {
                 if(menuOpen==false){
+                    $(".menu-screen").css("display","block")
                     $(".menu-screen").removeClass("menu-removed-from-js");
                     $(".menu-screen").addClass("menu-added-from-js");
                     $(".navbar-nav").css("opacity","0")
@@ -771,6 +934,7 @@
                     $(".menu-screen").addClass("menu-removed-from-js");
                     setTimeout(() => {
                     $(".navbar-nav").css("opacity","1") 
+                    $(".menu-screen").css("display","none")
                     }, 900);                
                     menuOpen = false;
                 }
