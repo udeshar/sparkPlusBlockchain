@@ -226,12 +226,12 @@
         }
     }
     .productImage{
-        top: 40%;
-        transform: translateY(0%);
+        top: 50%;
+        transform: translateY(-50%);
     }
     @keyframes slide4anm2{
         to{
-            top: 12%;
+            top: 23%;
         }
     }
     .productImage img{
@@ -299,7 +299,7 @@
         animation: none;
     }
     .customProductBox .productImage{
-        top: 15%;
+        top: 23%;
         left: 5%;
         /* animation: slide4anmImg12 .6s ease forwards 0.5s; */
         animation: none;
