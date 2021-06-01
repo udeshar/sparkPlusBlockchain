@@ -396,3 +396,11 @@ function activeNav(){
     }
    
 }
+
+// ****************************************** for mobile devices **************************************************
+
+$( ".home-container" ).on( "swiperight", swiperightHandler );
+
+function swiperightHandler(){
+    
+}

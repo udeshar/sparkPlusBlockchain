@@ -6,7 +6,7 @@ var progressWidth=12.5;
 var menuOpen = false;
 var tempp = false;
 var wind_width=window.innerWidth;
-if(wind_width<370){
+if(wind_width<640){
     changingSlideTime=1000;
 }
 else{
