@@ -163,8 +163,7 @@
     position: absolute;
     top: 30%;
     left: -25%;
-    transform: translate(-50%,-50%);
-    
+    transform: translate(-50%,-50%); 
 }
 .ts1{
     animation: fade_in 1s ease forwards 1.5s;

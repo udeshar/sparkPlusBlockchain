@@ -1,5 +1,5 @@
 var wind_width=window.innerWidth;
-if(wind_width<700){
+if(wind_width<800){
     changingSlideTime=800;
 }
 else{

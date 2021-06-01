@@ -1,4 +1,4 @@
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 800px){
 
     .lines-container{
         display: none;
@@ -203,7 +203,12 @@
         height: 80%;
         left: 50%;
         top: 51%;
-        animation: productBox 1s ease-out forwards;
+        animation: productBox 1.5s ease-out forwards;
+    }
+    @keyframes productBox{
+        from{
+            left: 130%;
+        }
     }
     .productDesc p{
         font-size: 11px;
@@ -407,5 +412,166 @@
     .backToHome i{
         color: #000;
     }
+    .cont-small-text{
+        font-size: 11px;
+        font-weight: lighter;
+        line-height: 2;
+        letter-spacing: 1px;
+    }
     /* contact us ends */
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+    /* loading screen  */
+    #logo{
+        height: 40px !important;
+    }
+    .paraNbutton p{
+        font-size: 14px;
+    }
+    .paraNbutton{
+        width: 100%;
+    }
+    .paraNbutton button{
+        font-size: 14px;
+        padding: 8px 30px;
+    }
+    /* loading screen ends */
+
+    /* intro slide  */
+    .opacity-box{
+        width: 40%;
+        top: 52%;
+        left: 60%;
+        transform: translate(-50%,-50%); 
+    }
+    .brand-name p{
+        font-size: 2rem;
+    }
+    .brand-desc p{
+        font-size: 11px;
+    }
+    /* intro slide ends */
+
+    /* technology slide  */
+    .forest-name{
+        font-size:2rem;
+    }
+    .crypto-logos{
+        left: 5%;
+    }
+    .crypto-logos img{
+        height: 30px;
+        width: 30px;
+        margin: 0px 7px;
+    }
+    .crypto-big-logos{
+        height: 180px;
+        width: 180px;
+        top: 37%;
+        left: -25%;
+    }
+    .forest-info{
+        left: 5%;
+    }
+    .forest-info p{
+        font-size: 11px;
+        line-height: 2;
+        letter-spacing: 1px;
+    }
+    .forest-info div{
+        margin-right: 10px;
+    }
+    /* technology slide ends */
+    /* services slide  */
+    .ocean-opacity-box1 h3{
+        font-size: 2rem;
+    }
+    .services-img{
+        width: 120px !important;
+    }
+    #s4-img{
+        height: 90px !important;
+        width: 90px !important;
+    }
+    .service-info p{
+        width: 100%;
+        font-size: 11px;
+        letter-spacing: 1px;
+        line-height: 2;
+    }
+    .service-info{
+        top:70%;
+    }
+    .holdPrevBtn{
+        display: none;
+    }
+    .holdNextBtn{
+        display: none;
+    }
+    /* services slide ends */
+
+    /* portfolio screen  */
+    .productBox{
+        width: 35%;
+    }
+    .productDesc{
+        font-size: 11px;
+        letter-spacing: 1px;
+        line-height: 2;
+    }
+    .productDesc .tech-used{
+        margin-top: 20px;
+    }
+    .p-tech-icon img{
+        width: 40px;
+        height: 40px;
+    }
+    .next-product{
+        left: 92%;
+        font-size: 11px;
+    }
+    .prev-product{
+        left: 48%;
+        font-size: 11px;
+    }
+    .productImage img{
+        width: 100px;
+    } 
+    #autobet img{
+        width: 100px;
+    }
+    @keyframes slide4anm1{
+        to{
+            left: -100%;
+        }
+    }
+    .customProductBox .productTitle{
+        left: -100%;
+    }
+    /* portfolio screen ends */
+
+    /* menu screen  */
+    .media-box div{
+        width: 80px;
+        height: 80px;
+        margin: 0px 10px;
+    }
+    .contact-info{
+        padding-left: 10px;
+    }
+    .contact-info div{
+        padding: 15px 20px;
+    }
+    /* menu screen ends */
+
+    /* contact us  */
+    .cont-small-text{
+        font-size: 12px;
+        font-weight: lighter;
+        line-height: 2;
+        letter-spacing: 1px;
+    }
+    /* contact us ends */
+
 }
