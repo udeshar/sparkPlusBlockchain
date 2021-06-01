@@ -421,7 +421,7 @@
     /* contact us ends */
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1024px) {
+@media only screen and (min-width: 799px) and (max-width: 1024px) {
     /* loading screen  */
     #logo{
         height: 40px !important;
