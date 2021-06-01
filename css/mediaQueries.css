@@ -597,7 +597,7 @@
         }
     }
 }
-@media only screen and (max-height: 824px) and (orientation: landscape){
+@media only screen and (max-height: 824px) and (orientation: landscape) and (max-width: 824px){
     @keyframes logoanimate{
         to{
             top:31%;
