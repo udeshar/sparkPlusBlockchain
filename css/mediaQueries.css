@@ -1,4 +1,4 @@
-@media only screen and (max-width: 799px){
+@media only screen and (max-width: 824px){
 
     .lines-container{
         display: none;
@@ -421,7 +421,7 @@
     /* contact us ends */
 }
 
-@media only screen and (min-width: 799px) and (max-width: 1024px) {
+@media only screen and (min-width: 824px) and (max-width: 1024px) {
     /* loading screen  */
     #logo{
         height: 40px !important;
@@ -574,4 +574,33 @@
     }
     /* contact us ends */
 
+}
+
+@media only screen and (max-height: 600px) and (-webkit-min-device-pixel-ratio: 2){
+    @keyframes logoanimate{
+        to{
+            top:40%;
+        }
+    }
+}
+@media only screen and (min-height: 600px) and (max-height: 824px) and (-webkit-min-device-pixel-ratio: 2){
+    @keyframes logoanimate{
+        to{
+            top:43%;
+        }
+    }
+}
+@media only screen and (max-width: 824px) and (orientation: landscape){
+    @keyframes logoanimate{
+        to{
+            top:31%;
+        }
+    }
+}
+@media only screen and (max-height: 824px) and (orientation: landscape){
+    @keyframes logoanimate{
+        to{
+            top:31%;
+        }
+    }
 }
