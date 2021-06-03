@@ -343,3 +343,6 @@ nav{
         opacity: 1;
     }
 }
+.slideNameOnEveryPage{
+    font-size: 14px;
+}
