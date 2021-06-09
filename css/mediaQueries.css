@@ -155,11 +155,14 @@
         }
     }
     .services-img{
-        width: 100px !important;
+        width: 170px !important;
     }
     #s4-img{
-        height: 70px !important;
-        width: 70px !important;
+        height: 120px !important;
+        width: 120px !important;
+    }
+    #s3-img{
+        width: 250px !important;
     }
     .service-info{
         width: 100%;
