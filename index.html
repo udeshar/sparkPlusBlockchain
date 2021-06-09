@@ -394,7 +394,7 @@
 
                     <a href="https://www.sparkplustech.com" class="explore-more" target="_blank">Explore more</a>
                 </div>
-                <div class="next-arrow1 all-next-text" onclick="showForest()">
+                <div class="next-arrow1 all-next-text onlyForArrowAnimeNext" onclick="showForest()">
                     <span>next Page</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -492,12 +492,12 @@
                         <img src="./images/latestImages/oxcert.svg" alt="oxcert png logo">
                     </div>
 
-                    <div class="next-arrow all-next-text" onclick="changeTS()" id="nxtBtn">
+                    <div class="next-arrow all-next-text onlyForArrowAnimeNext" onclick="changeTS()" id="nxtBtn">
                         <span id="nxt-btn-txt">next</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </div>
-                    <div class="prev-arrow all-next-text" onclick="changeTSback()" id="prevBtn">
+                    <div class="prev-arrow all-next-text onlyForArrowAnimePrev" onclick="changeTSback()" id="prevBtn">
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span id="prev-btn-txt">prev page</span>
@@ -589,13 +589,13 @@
                             <div id="s-ProgressBar"></div>
                         </div>
                         <div class="s-buttons">
-                            <div class="s-prev-btn p-btn" onclick="goToPrev()" onmousedown="jumpToAPage('prev')" onmouseup="jumpToAPage2('prev')">
+                            <div class="s-prev-btn p-btn onlyForArrowAnimePrev" onclick="goToPrev()" onmousedown="jumpToAPage('prev')" onmouseup="jumpToAPage2('prev')">
                                 <i class="fa fa-angle-left" aria-hidden="true"></i>
                                 <i class="fa fa-angle-left" aria-hidden="true"></i>
                                 <span id="prev-btn-txt2">prev page</span>
                                 <div class="holdPrevBtn">Hold mouse Button to switch to previous page</div>
                             </div>
-                            <div class="s-next-btn n-btn" onclick="goToNxt()" onmousedown="jumpToAPage()" onmouseup="jumpToAPage2()">
+                            <div class="s-next-btn n-btn onlyForArrowAnimeNext" onclick="goToNxt()" onmousedown="jumpToAPage()" onmouseup="jumpToAPage2()">
                                 <span id="next-btn-txt2">next</span>
                                 <i class="fa fa-angle-right" aria-hidden="true"></i>
                                 <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -651,7 +651,7 @@
                     </div>
                     <!-- slide name begins -->
                     <div class="slide-name">
-                        <a href="">Portfolio</a>
+                        <a class="slideNameOnEveryPage">Portfolio</a>
                         <div></div>
                     </div>
                     <!-- slide name ends -->
@@ -918,18 +918,18 @@
                     </div>
                     <!-- slide name begins -->
                     <div class="slide-name">
-                        <a href="">Portfolio</a>
+                        <a class="slideNameOnEveryPage">Portfolio</a>
                         <div></div>
                     </div>
                     <!-- slide name ends -->
                 </div>
 
-                <div class="next-product all-next-text" onclick="nextProduct()" id="next-product">
+                <div class="next-product all-next-text onlyForArrowAnimeNext" onclick="nextProduct()" id="next-product">
                     <span id="nxt-btn-txt3">next</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </div>
-                <div class="prev-product all-next-text" onclick="prevProduct()">
+                <div class="prev-product all-next-text onlyForArrowAnimePrev" onclick="prevProduct()">
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <span id="prev-btn-txt3">prev page</span>

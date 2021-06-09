@@ -207,6 +207,7 @@
     color: #fff;
     /* font-size: 12px; */
     margin-left: 10px;
+    letter-spacing: -1px !important;
 }
 .services-txt div{
     position: absolute;

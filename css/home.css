@@ -350,8 +350,42 @@ nav{
     }
 }
 .slideNameOnEveryPage{
-    font-size: 16px;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    color: #fff !important;
 }
 .all-next-text{
-    font-size: 13px;
+    font-size: 12.5px;
+}
+.onlyForArrowAnimePrev i{
+    position: relative;
+    left: 0px;
+    animation: animatePrevArrow .5s ease infinite;
+}
+@keyframes animatePrevArrow{
+    0%{
+        left: 0px;
+    }
+    50%{
+        left: -3px;
+    }
+    100%{
+        left:0px;
+    }
+}
+.onlyForArrowAnimeNext i{
+    position: relative;
+    left: 0px;
+    animation: animateNextArrow .5s ease infinite;
+}
+@keyframes animateNextArrow{
+    0%{
+        left: 0px;
+    }
+    50%{
+        left: 3px;
+    }
+    100%{
+        left:0px;
+    }
 }

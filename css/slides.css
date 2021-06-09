@@ -139,7 +139,7 @@
     /* transform: translate(-50%,-50%); */
 }
 .brand-desc p{
-    font-size: 12px;
+    font-size: 11px;
     line-height: 2;
     letter-spacing: 1px;
 }
@@ -147,9 +147,10 @@
     position: absolute;
     left: 7%;
     bottom: 5%;
-    color: #fff;
+    color: #fff !important;
     font-size: 13px;
     font-weight: 700;
+    text-decoration: none !important;
 }
 .next-arrow1{
     position: absolute;
