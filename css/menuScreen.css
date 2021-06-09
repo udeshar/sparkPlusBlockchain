@@ -45,7 +45,7 @@
     list-style-type: none;
 }
 .menu-items ul li{
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 100;
     color: rgb(255, 255, 255);
     cursor: pointer;
@@ -56,7 +56,7 @@
     padding: 0px 8px;
 }
 .menu-items ul ul li{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: lighter;
     color: rgb(255, 255, 255);
     display: flex;
@@ -76,7 +76,7 @@
 }
 .media-box{
     position: absolute;
-    top: 58%;
+    top: 50%;
     left: 40%;
     transform: translateY(-50%);
     display: flex;

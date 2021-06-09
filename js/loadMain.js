@@ -17,7 +17,7 @@ function loadBody(){
         document.getElementById("logo-div").classList.add("logoUp");
         document.querySelector(".paraNbutton").classList.add("paraup");
         document.querySelector("#main-button").classList.add("buttonup");
-    }, 5000);
+    }, 6000);
 }
 
 const openHomePage = () => {

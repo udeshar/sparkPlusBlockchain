@@ -47,6 +47,10 @@
     font-size: 2.5rem;
     font-weight: bold;
 }
+.productTitle h3{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
 .productImage{
     position: absolute;
     top: 50%;
@@ -57,8 +61,11 @@
 .productImage img{
     filter: drop-shadow(1px 1px 15px rgb(22, 22, 22));
 }
+.slide-name a{
+    font-size: 16px;
+}
 .productDesc{
-    font-size: 14px;
+    font-size: 11px;
     position: absolute;
     top:65%;
     /* transform: translateY(-50%); */
@@ -67,7 +74,9 @@
     animation: slide4anm3 1s ease-in-out forwards 1.6s;
 }
 .productDesc p{
+    font-weight: lighter;
     line-height: 2;
+    letter-spacing: 1px;
 }
 .slide-ind{
     font-size: 12px;
@@ -90,8 +99,9 @@
     font-size: 12px;
 }
 .p-tech-icon img{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 @keyframes slide4anm1{
     to{
@@ -118,7 +128,7 @@
     top: 80%;
     left: 90%;
     transform: translate(-50%,-50%);
-    font-size: 12px;
+    /* font-size: 12px; */
     cursor: pointer;
 }
 .prev-product{
@@ -126,7 +136,7 @@
     top: 80%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 12px;
+    /* font-size: 12px; */
     cursor: pointer;
 }
 .customProductBox{
@@ -170,4 +180,13 @@
 }
 #autobet img{
     width: 150px;
+}
+#simplacity img{
+    width: 200px;
+}
+#smartBallots img{
+    width: 200px;
+}
+#nftMarketplace img{
+    width: 210px;
 }

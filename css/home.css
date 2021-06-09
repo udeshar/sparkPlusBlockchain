@@ -95,15 +95,19 @@
     color: #fff !important;
     font-size: 12px !important;
 }
+.navbar-brand img{
+    width: 120px;
+}
 .nav-link{
     color: #fff;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: lighter;
     margin: 0px 40px;
 }
 nav{
     padding-left: 6% !important;
     padding-right: 6% !important;
+    padding-top: 5px !important;
 }
 .side-navbar{
     position: fixed;
@@ -289,16 +293,18 @@ nav{
 .letter7{
     animation: text-anime 1s ease forwards 2.1s;
 }
+.text-animation-udesh:hover{
+    color: darkgray;
+    /* font-size: 14px; */
+}
 .text-animation-udesh:hover .letter1{
     transform: rotateX(90deg);
     transition: .5s;
-    color: black !important;
-    font-weight: bold;
+    color: #fff !important;
+    opacity: 1;
+    /* font-weight: bold; */
     text-decoration: underline;
 } 
-.text-animation-udesh:hover{
-    color: darkgray;
-}
 .nav-item{
     position: relative;
 }
@@ -344,5 +350,8 @@ nav{
     }
 }
 .slideNameOnEveryPage{
-    font-size: 14px;
+    font-size: 16px;
+}
+.all-next-text{
+    font-size: 13px;
 }

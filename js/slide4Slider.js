@@ -96,7 +96,7 @@ function nextProduct(){
             document.getElementById("productBox9").classList.add("activeOwn");
         },changingSlideTime)
         slide4counter=9;
-        document.getElementById("next-product").innerText="Home";
+        document.getElementById("nxt-btn-txt3").innerText="Home";
         return;
     }
     if(slide4counter==9){
@@ -191,7 +191,7 @@ function prevProduct(){
         },changingSlideTime)
         slide4counter=8;
         document.getElementById("next-product").style.display="block";
-        document.getElementById("next-product").innerText="Next";
+        document.getElementById("nxt-btn-txt3").innerText="Next";
         return;
     }
 }

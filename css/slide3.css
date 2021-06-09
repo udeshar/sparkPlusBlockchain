@@ -104,15 +104,15 @@
     top:40%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-weight: 500;
-    font-size: 2em;
+    font-weight: bold;
+    font-size: 2.5em;
     opacity: 0;
     animation: revealimg .5s ease forwards 2.3s;
 }
 .service-info{
     position: absolute;
     width: 70%;
-    top:60%;
+    top:65%;
     left: 60%;
     transform: translate(-50%,-50%);
     display: flex;
@@ -127,9 +127,11 @@
     animation: revealimg .5s ease forwards 2.3s;
 }
 .service-info p{
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: lighter;
     width: 70%;
-    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 2;
     opacity: 0;
     animation: revealimg .5s ease forwards 2.3s;
 }
@@ -139,9 +141,18 @@
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 1;
-    width: 150px;
+    width: 180px;
     opacity: 0;
     animation: revealimg .5s ease forwards 2.5s;
+}
+#s2-img{
+    width: 230px;
+}
+#s3-img{
+    width: 400px;
+}
+#s4-img{
+    width: 130px;
 }
 @keyframes revealimg{
     from{
@@ -157,7 +168,6 @@
     left: 5%;
     transform: translateY(-50%);
     width: 30%;
-    font-size: 12px;
 }
 .services-progress .s-progress-bar{
     background-color: #000;
@@ -165,7 +175,7 @@
     height: 1px;
 }
 .services-progress .s-progress-bar div{
-    width: 12.5%;
+    width: 0%;
     transition: .5s ease;
     height: 1px;
     background-color: #fff;
@@ -195,7 +205,7 @@
 }
 .services-txt a{
     color: #fff;
-    font-size: 12px;
+    /* font-size: 12px; */
     margin-left: 10px;
 }
 .services-txt div{
@@ -237,6 +247,7 @@
     padding: 5px 10px;
     color:#000;
     font-weight: bold;
+    font-size: 12px;
 }
 .p-btn:hover .holdPrevBtn{
     opacity: 1;
@@ -258,4 +269,5 @@
     padding: 5px 10px;
     color:#000;
     font-weight: bold;
+    font-size: 12px;
 }

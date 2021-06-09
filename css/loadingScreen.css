@@ -17,7 +17,7 @@
     left: 50%;
     transform: translate(-50%,-50%); 
 }
-#logo,mask{
+/* #logo,mask{
     animation: fill .5s ease forwards 3.5s;
 }
 #logo :nth-child(2){
@@ -64,7 +64,80 @@
     to{
         fill: white;
     }
+} */
+
+#logo,mask{
+    filter: drop-shadow(1px 1px 3px rgba(44, 206, 255, 0.377));
+    animation: fillPaths .8s ease forwards 4.5s;
 }
+@keyframes fillPaths{
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: white;
+    }
+}
+#path-s{
+    stroke-dasharray: 293px;
+    stroke-dashoffset: 293px;
+    animation: strokeanimate 2s ease-in-out forwards .3s;
+   
+}
+#path-p{
+    stroke-dasharray: 297px;
+    stroke-dashoffset: 297px;
+    animation: strokeanimate 2s ease-in-out forwards .6s;
+}
+#path-a{
+    stroke-dasharray: 337px;
+    stroke-dashoffset: 337px;
+    animation: strokeanimate 2s ease-in-out forwards .9s;
+}
+#path-r{
+    stroke-dasharray: 362px;
+    stroke-dashoffset: 362px;
+    animation: strokeanimate 2s ease-in-out forwards 1.2s;
+}
+#path-k{
+    stroke-dasharray: 374px;
+    stroke-dashoffset: 374px;
+    animation: strokeanimate 2s ease-in-out forwards 1.5s;
+}
+@keyframes strokeanimate{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+#sparkRoundLogo{
+    opacity: 0;
+    animation: sparkRound .8s ease forwards 4.5s;
+}
+#spark-plus-logo{
+    opacity: 0;
+    animation: sparkPlus .8s ease forwards 4.5s;
+}
+@keyframes sparkRound{
+    from{
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes sparkPlus{
+    from{
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 .paraNbutton{
     position: absolute;
     text-align: center;

@@ -42,15 +42,15 @@
 .statueImage{
     position: absolute;
     width: 35%;
-    top: 60%;
-    left:35%;
+    top: 48%;
+    left:43%;
     transform: translate(-50%,-50%);
-    filter: drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.596));
+    /* filter: drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.596)); */
 }
 .slide-name{
     position: absolute;
     top: 5%;
-    left: 80%;
+    left: 88%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@
 }
 .slide-name a{
     color: #fff;
-    font-size: 12px;
+    /* font-size: 14px; */
     margin-right: 10px;
 }
 .slide-name div{
@@ -139,7 +139,7 @@
     /* transform: translate(-50%,-50%); */
 }
 .brand-desc p{
-    font-size: 13px;
+    font-size: 12px;
     line-height: 2;
     letter-spacing: 1px;
 }
@@ -156,6 +156,5 @@
     top: 85%;
     left: 90%;
     transform: translate(-50%,-50%);
-    font-size: 12px;
     cursor: pointer;
 }

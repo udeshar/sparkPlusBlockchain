@@ -8,7 +8,8 @@ navProgress2(slide3Num);
 
 function goToNxt(){
     var tempSlide3Num=slide3Num+1;
-    navProgress2(tempSlide3Num);
+    if(slide3Num!=5)
+        navProgress2(tempSlide3Num);
     if(slide3Num==1){
         document.getElementById("s1-img").classList.add("disappear");
         document.getElementById("s-h3-1").classList.add("disappear");
@@ -95,7 +96,7 @@ function goToNxt(){
         }, 1000);
         document.getElementById("s5").style.display="block";
         slide3Num=5;
-        progressWidth+=12.5;
+        // progressWidth+=12.5;
         document.getElementById("s-slideNum").innerText=slide3Num;
         document.getElementById("next-btn-txt2").innerHTML="next page";
         return;
@@ -179,7 +180,8 @@ function goToNxt(){
 
 function goToPrev(){
     var tempSlide3Num=slide3Num-1;
-    navProgress2(tempSlide3Num);
+    if(slide3Num!=1)
+        navProgress2(tempSlide3Num);
     if(slide3Num==1){
         showForest();
     }
