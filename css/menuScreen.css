@@ -36,8 +36,10 @@
     line-height: 2.5;
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
-.menu-items a{
-    text-decoration: none;
+.menu-items ul li a{
+    /* display: flex;
+    flex-direction: column; */
+    text-decoration: none !important;
     color: rgb(255, 255, 255) !important;
 }
 .menu-items ul{
@@ -45,33 +47,21 @@
     list-style-type: none;
 }
 .menu-items ul li{
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 100;
     color: rgb(255, 255, 255);
     cursor: pointer;
 }
-.menu-items ul ul{
-    line-height: 2;
-    margin: 0px;
-    padding: 0px 8px;
-}
-.menu-items ul ul li{
-    font-size: 14px;
-    font-weight: lighter;
-    color: rgb(255, 255, 255);
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-}
-.menu-items ul ul li div{
+.menu-items ul li a div{
     height: 1px;
     width: 0px;
     background-color: #fff;
     margin-right: 5px;
     transition: 1s;
+    margin-top: -3px;
 }
-.menu-items ul ul li:hover div{
-    width: 30px;
+.menu-items ul li a:hover div{
+    width: 100px;
     transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .media-box{

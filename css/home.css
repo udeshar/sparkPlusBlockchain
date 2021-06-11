@@ -303,7 +303,7 @@ nav{
     color: #fff !important;
     opacity: 1;
     /* font-weight: bold; */
-    text-decoration: underline;
+    /* text-decoration: underline; */
 } 
 .nav-item{
     position: relative;
@@ -350,12 +350,14 @@ nav{
     }
 }
 .slideNameOnEveryPage{
-    font-size: 13px;
+    font-size: 15px;
     text-decoration: none !important;
     color: #fff !important;
+    font-weight: bold;
 }
 .all-next-text{
-    font-size: 12.5px;
+    font-size: 15px;
+    text-shadow: 2px 2px 5px black;
 }
 .onlyForArrowAnimePrev i{
     position: relative;

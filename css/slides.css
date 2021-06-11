@@ -85,12 +85,12 @@
     align-items: center;
 }
 .brand-name .sprk{
-    transform: translateX(-80px);
+    transform: translateX(-120px);
     animation: sprk .8s ease forwards .5s;
 }
 @keyframes sprk{
     to{
-        transform: translateX(0px);
+        transform: translateX(-20px);
     }
 }
 .blockc-line p{
@@ -139,7 +139,7 @@
     /* transform: translate(-50%,-50%); */
 }
 .brand-desc p{
-    font-size: 11px;
+    font-size: 13px;
     line-height: 2;
     letter-spacing: 1px;
 }

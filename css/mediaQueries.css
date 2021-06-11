@@ -157,13 +157,6 @@
     .services-img{
         width: 170px !important;
     }
-    #s4-img{
-        height: 120px !important;
-        width: 120px !important;
-    }
-    #s3-img{
-        width: 250px !important;
-    }
     .service-info{
         width: 100%;
         top:66%;
@@ -499,10 +492,6 @@
     }
     .services-img{
         width: 120px !important;
-    }
-    #s4-img{
-        height: 90px !important;
-        width: 90px !important;
     }
     .service-info p{
         width: 100%;
