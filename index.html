@@ -250,8 +250,8 @@
             <div class="innovation">
                 <!-- <p>make innovation</p>
                 <p>work for you</p> -->
-                <p><span>M</span><span>a</span><span>k</span><span>e</span> <span>I</span><span>n</span><span>n</span><span>o</span><span>v</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span></p>
-                <p><span>W</span><span>o</span><span>r</span><span>k</span> <span>F</span><span>o</span><span>r</span> <span>Y</span><span>o</span><span>u</span></p>
+                <p><span>M</span><span>a</span><span>k</span><span>e</span> <span>I</span><span>n</span><span>n</span><span>o</span><span>v</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span>
+                <span>W</span><span>o</span><span>r</span><span>k</span> <span>F</span><span>o</span><span>r</span> <span>Y</span><span>o</span><span>u</span></p>
             </div>
             <!-- make innovation work for you ends -->
 
@@ -332,7 +332,7 @@
                         <li><a onclick="showForest()" class="menu-it">Technology<div></div></a></li>
                         <li><a onclick="showOcean()" class="menu-it">Services<div></div></a></li>
                         <li><a onclick="showDessert()" class="menu-it">Portfolio<div></div></a></li>
-                        <li><a onclick="gotocontact(1)">About us<div></div></a></li>
+                        <li><a onclick="gotocontact(1)" id="clsMenu">About us<div></div></a></li>
                     </ul>
                 </div>
                 <!-- <div class="contact-info">
@@ -955,6 +955,10 @@
                 $.fn.myFunction();
             });
             $(".firstUl li").click(function(){
+                $(".icon").toggleClass("close");
+                $.fn.myFunction();
+            });
+            $("#clsMenu").click(function(){
                 $(".icon").toggleClass("close");
                 $.fn.myFunction();
             });

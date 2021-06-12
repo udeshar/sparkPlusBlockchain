@@ -398,15 +398,17 @@ nav{
 
 .innovation{
     position: fixed;
-    top: 93%;
+    top: 97%;
     left: 5%;
     transform: translateY(-50%);
+    text-transform: capitalize;
     z-index: 12;
+    word-spacing: 3px;
 }
 .innovation p{
     /* font-family: Arial, Helvetica, sans-serif; */
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 1px;
     /* color: gray; */
     /* font-weight: bolder; */
@@ -464,4 +466,37 @@ nav{
 }
 .innovation p span:nth-child(14){
     animation: appear 1s ease forwards 3.1s;
+}
+.innovation p span:nth-child(15){
+    animation: appear 1s ease forwards 3.3s;
+}
+.innovation p span:nth-child(16){
+    animation: appear 1s ease forwards 3.5s;
+}
+.innovation p span:nth-child(17){
+    animation: appear 1s ease forwards 3.7s;
+}
+.innovation p span:nth-child(18){
+    animation: appear 1s ease forwards 3.9s;
+}
+.innovation p span:nth-child(19){
+    animation: appear 1s ease forwards 4.1s;
+}
+.innovation p span:nth-child(20){
+    animation: appear 1s ease forwards 4.3s;
+}
+.innovation p span:nth-child(21){
+    animation: appear 1s ease forwards 4.5s;
+}
+.innovation p span:nth-child(22){
+    animation: appear 1s ease forwards 4.7s;
+}
+.innovation p span:nth-child(23){
+    animation: appear 1s ease forwards 4.9s;
+}
+.innovation p span:nth-child(24){
+    animation: appear 1s ease forwards 5.1s;
+}
+.innovation p span:nth-child(25){
+    animation: appear 1s ease forwards 5.3s;
 }

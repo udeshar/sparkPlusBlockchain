@@ -453,7 +453,103 @@
     }
     /* contact us ends */
 }
+@media only screen and (min-width: 360px){
 
+    .slideNameOnEveryPage{
+        font-size: 15px !important;
+    }
+    .all-next-text{
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    /* intro slide  */
+    .brand-name p{
+        font-size: 2.2rem;
+    }
+    .brand-desc p{
+        font-size: 13px;
+    }
+    .explore-more{
+        font-size: 14px;
+    }
+    .next-arrow1{
+        left: 76%;
+    }
+    /* intro slide begins */
+
+    /* technology slide  */
+    .forest-name{
+        font-size:2.2rem;
+    }
+    .forest-info p{
+        font-size:13px;
+    }
+    .crypto-big-logos{
+        height: 150px;
+        width: 150px;
+        top: 40%;
+    }
+    .forest .slide-name2{
+        top: 81%;
+    }
+    /* technology slide ends */
+
+    /* services slide  */
+    .ocean-opacity-box1 h3{
+        font-size: 2.1rem;
+    }
+    .services-txt{
+        left: 62%;
+    }
+    .services-img{
+        /* width: 170px !important; */
+        height: 120px;
+    }
+    .service-info p{
+        font-size: 11px;
+    }
+   
+    /* services slide ends */
+
+    /* portfolio slide */
+    /* .productDesc p{
+        font-size: 13px;
+    }
+    .p-tech-icon img{
+        width: 30px;
+        height: 30px;
+    }
+    .productTitle{
+        animation: slide4anm1 1s ease-in-out forwards 1s;
+    }
+    @keyframes slide4anm1Text{
+        to{
+            font-size: 1.8rem;
+        }
+    }
+    .customProductBox .productTitle h3{
+        font-size: 1.8rem;
+    }
+    .productTitle h3{
+        font-size: 1.8rem;
+    }
+    .productImage img{
+        animation: slide4anm2Size 1s ease-in-out forwards 1s;
+        width: 120px !important;
+    }
+    @keyframes slide4anm2{
+        to{
+            top: 26%;
+        }
+    }
+    @keyframes slide4anm3{
+        to{
+            top: 38%;
+        }
+    } */
+    /* portfolio slide  ends*/
+}
 @media only screen and (min-width: 824px) and (max-width: 1024px) {
     /* loading screen  */
     #logo{
