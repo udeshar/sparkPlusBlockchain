@@ -3,6 +3,9 @@
     .lines-container{
         display: none;
     }
+    .innovation{
+        display: none;
+    }
     .side-navbar{
         display: none;
     }
@@ -155,7 +158,8 @@
         }
     }
     .services-img{
-        width: 170px !important;
+        /* width: 170px !important; */
+        height: 120px;
     }
     .service-info{
         width: 100%;
@@ -429,6 +433,9 @@
     #logo{
         width: 300px;
     }
+    .innovation{
+        display: none;
+    }
     .paraNbutton p{
         font-size: 14px;
     }
@@ -491,7 +498,7 @@
         font-size: 2rem;
     }
     .services-img{
-        width: 120px !important;
+        height: 80px;
     }
     .service-info p{
         width: 100%;
@@ -572,8 +579,95 @@
         letter-spacing: 1px;
     }
     /* contact us ends */
-
 }
+
+@media only screen and (min-width: 1560px) {
+    /* loading screen */
+    #logo{
+        width: 350px;
+    }
+    /* .innovation{
+        display: none;
+    } */
+    .paraNbutton p{
+        font-size: 15px;
+    }
+    /* .paraNbutton{
+        width: 100%;
+    }
+    .paraNbutton button{
+        font-size: 14px;
+        padding: 8px 30px;
+    } */
+    /* loading screen ends */
+
+    /* common classes in all slides  */
+    .slideNameOnEveryPage{
+        font-size: 18px !important;
+    }
+    .all-next-text{
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .innovation p{
+        font-size: 18px;
+    }
+    .cont-abt-block a{
+        font-size: 14px;
+    }
+    .scroll a{
+        font-size: 14px;
+    }
+    .side-nav p{
+        font-size: 14px;
+    }
+    /* common classes in all slides ends */
+
+    /* navbar begins */
+    .navbar-brand img{
+        width: 80%;
+    }
+    .nav-link{
+        font-size: 16px;
+    }
+    /* navbar begins ends*/
+
+    /* intro slide  */
+    .brand-desc p{
+        font-size: 16px;
+    }
+    .explore-more{
+        font-size: 17px;
+    }
+    /* intro slide ends */
+    /* technology slide begins  */
+    .forest-info p{
+        font-size: 16px;
+    }
+    .crypto-big-logos{
+        top: 40%;
+        height: 270px;
+        width: 270px;
+    }
+    .crypto-logos img{
+        height: 45px;
+        width: 45px;
+        
+    }
+    /* technology slide begins ends */
+    
+    /* services slide  */
+    .service-info p{
+        font-size: 16px;
+    }
+    /* services slide begins */
+    /* technology slide  */
+    .productDesc{
+        font-size: 16px;
+    }
+    /* technology slide begins */
+}
+
     @media only screen and (max-width: 602px) and (-webkit-min-device-pixel-ratio: 2){
         @keyframes logoanimate{
             to{

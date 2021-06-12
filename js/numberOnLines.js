@@ -2,12 +2,14 @@ function changeSlideNumber(){
         menuActiveNav()
         if(slideNumber==1){
             setTimeout(() => {
-                slide2AnimationSetting()
+                slide2AnimationSetting();
                document.getElementById("valueToChange").innerText="1"; 
+               $(".services-img").removeClass("imgFloatClass");
             }, 1000);
             
         }
         if(slideNumber==2){
+            
             setTimeout(() => {
                document.getElementById("valueToChange").innerText="2";
                $(".crypto-big-logos").removeClass('d-none');
@@ -18,16 +20,20 @@ function changeSlideNumber(){
             
         }
         if(slideNumber==3){
+            
             setTimeout(() => {
                 slide2AnimationSetting()
                document.getElementById("valueToChange").innerText="3"; 
+               $(".services-img").removeClass("imgFloatClass");
             }, 1000);
             
         }
         if(slideNumber==4){
+            
             setTimeout(() => {
                 slide2AnimationSetting()
                document.getElementById("valueToChange").innerText="4"; 
+               $(".services-img").removeClass("imgFloatClass");
             }, 1000);
             
         }
