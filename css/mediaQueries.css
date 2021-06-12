@@ -18,10 +18,10 @@
 
     /* common classes in all slides  */
     .slideNameOnEveryPage{
-        font-size: 12px !important;
+        font-size: 13px !important;
     }
     .all-next-text{
-        font-size: 11px;
+        font-size: 12px;
         font-weight: bold;
     }
     /* common classes in all slides ends */
@@ -33,6 +33,11 @@
     /* navbar begins ends*/
 
     /* intro slide */
+    @keyframes sprk{
+        to{
+            transform: translateX(0px);
+        }
+    }
     .statueImage{
         top: 65%;
         left: 10%;
@@ -48,10 +53,10 @@
         font-size: 1.5rem;
     }
     .brand-desc p{
-        font-size: 9px;
+        font-size: 11px;
     }
     .brand-desc{
-        top: 50%;
+        top: 48%;
     }
     .explore-more{
         font-size: 12px;
@@ -81,8 +86,8 @@
         left: 10%;
     }
     .forest-info p{
-        font-size: 9px;
-        width: 75%;
+        font-size:11px;
+        width: 80%;
         line-height: 2;
         letter-spacing: 1px;
     }
@@ -159,7 +164,7 @@
     }
     .services-img{
         /* width: 170px !important; */
-        height: 120px;
+        height: 90px;
     }
     .service-info{
         width: 100%;
@@ -217,7 +222,7 @@
         }
     }
     .productDesc p{
-        font-size: 9px;
+        font-size: 10px;
     }
     .p-tech-icon img{
         margin-top: 8px;
@@ -434,7 +439,10 @@
         width: 300px;
     }
     .innovation{
-        display: none;
+        display: block;
+    }
+    .innovation p{
+        font-size: 14px;
     }
     .paraNbutton p{
         font-size: 14px;
@@ -447,7 +455,13 @@
         padding: 8px 30px;
     }
     /* loading screen ends */
-
+    .slideNameOnEveryPage{
+        font-size: 16px !important;
+    }
+    .all-next-text{
+        font-size: 15px;
+        font-weight: bold;
+    }
     /* intro slide  */
     .opacity-box{
         width: 40%;
@@ -459,7 +473,7 @@
         font-size: 2rem;
     }
     .brand-desc p{
-        font-size: 11px;
+        font-size: 13px;
     }
     /* intro slide ends */
 
@@ -485,7 +499,7 @@
         left: 5%;
     }
     .forest-info p{
-        font-size: 11px;
+        font-size: 13px;
         line-height: 2;
         letter-spacing: 1px;
     }
@@ -500,11 +514,11 @@
     .services-img{
         height: 80px;
     }
+    .service-info{
+        width: 90%;
+    }
     .service-info p{
-        width: 100%;
-        font-size: 11px;
-        letter-spacing: 1px;
-        line-height: 2;
+        font-size: 12.5px;
     }
     .service-info{
         top:70%;
@@ -519,12 +533,7 @@
 
     /* portfolio screen  */
     .productBox{
-        width: 35%;
-    }
-    .productDesc{
-        font-size: 11px;
-        letter-spacing: 1px;
-        line-height: 2;
+        width: 38%;
     }
     .productDesc .tech-used{
         margin-top: 20px;
@@ -535,11 +544,9 @@
     }
     .next-product{
         left: 92%;
-        font-size: 11px;
     }
     .prev-product{
-        left: 48%;
-        font-size: 11px;
+        left: 46%;
     }
     .productImage img{
         width: 100px;
