@@ -631,14 +631,14 @@
 
     /* common classes in all slides  */
     .slideNameOnEveryPage{
-        font-size: 18px !important;
+        font-size: 17px !important;
     }
     .all-next-text{
-        font-size: 17px;
+        font-size: 16px;
         font-weight: bold;
     }
     .innovation p{
-        font-size: 18px;
+        font-size: 17px;
     }
     .cont-abt-block a{
         font-size: 14px;
@@ -656,21 +656,21 @@
         width: 80%;
     }
     .nav-link{
-        font-size: 13px !important;
+        font-size: 12px !important;
     }
     /* navbar begins ends*/
 
     /* intro slide  */
     .brand-desc p{
-        font-size: 16px;
+        font-size: 15px;
     }
     .explore-more{
-        font-size: 17px;
+        font-size: 16px;
     }
     /* intro slide ends */
     /* technology slide begins  */
     .forest-info p{
-        font-size: 16px;
+        font-size: 15px;
     }
     .crypto-big-logos{
         top: 40%;
@@ -686,15 +686,15 @@
     
     /* services slide  */
     .service-info p{
-        font-size: 16px;
+        font-size: 15px;
     }
     /* services slide begins */
     /* technology slide  */
     .productDesc{
-        font-size: 16px;
+        font-size: 15px;
     }
     .productDesc .tech-used h3{
-        font-size: 16px;
+        font-size: 15px;
     }
     /* technology slide begins */
 }
