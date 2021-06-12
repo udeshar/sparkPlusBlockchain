@@ -392,7 +392,7 @@
         transform: translateY(-50%);
         width: 80vw;
     }
-    .menu-items ul ul li{
+    .menu-items ul li{
         font-size: 12px;
         line-height: 2.3;
     }
@@ -453,7 +453,7 @@
     }
     /* contact us ends */
 }
-@media only screen and (min-width: 360px){
+@media only screen and (min-width: 360px) and (max-width: 824px){
 
     .slideNameOnEveryPage{
         font-size: 15px !important;
@@ -509,11 +509,16 @@
     .service-info p{
         font-size: 11px;
     }
+    .service-info{
+        top:68%;
+        left: 52%;
+        width: 90%;
+    }
    
     /* services slide ends */
 
     /* portfolio slide */
-    /* .productDesc p{
+    .productDesc p{
         font-size: 13px;
     }
     .p-tech-icon img{
@@ -536,7 +541,16 @@
     }
     .productImage img{
         animation: slide4anm2Size 1s ease-in-out forwards 1s;
-        width: 120px !important;
+        width: 140px !important;
+    }
+    .customProductBox .productImage{
+        top: 26%;
+    }
+    .customProductBox .productDesc{
+        top:38%;
+    }
+    .productDesc .tech-used{
+        margin-top: 30px;
     }
     @keyframes slide4anm2{
         to{
@@ -547,9 +561,177 @@
         to{
             top: 38%;
         }
-    } */
+    }
+    #autobet img{
+        width: 90px !important;
+    }
+    #solo img{
+        width: 90px !important;
+    }
     /* portfolio slide  ends*/
+    /* menu screen  */
+    .menu-items ul li{
+        font-size: 18px;
+        line-height: 2.3;
+    }
+    .media-box div{
+        font-size: 18px;
+    }
+    /* menu screen ends */
+    /* about us  */
+    .cont-heading{
+        font-size: 25px;
+    }
+    .cont-small-text{
+        font-size: 14px;
+    }
+    /* about us ends */
 }
+
+@media only screen and (min-width : 768px) and (max-width : 824px){
+    .slideNameOnEveryPage{
+        font-size: 23px !important;
+    }
+    .all-next-text{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* intro slide  */
+    .brand-name p{
+        font-size: 2.8rem;
+    }
+    .brand-desc p{
+        font-size: 18px;
+    }
+    .explore-more{
+        font-size: 20px;
+    }
+    .next-arrow1{
+        left: 75%;
+        width: 130px;
+    }
+    /* intro slide begins */
+
+     /* technology slide  */
+     .forest-name{
+        font-size:2.8rem;
+    }
+    .forest-info p{
+        font-size:18px;
+    }
+    .crypto-big-logos{
+        height: 180px;
+        width: 180px;
+        top: 45%;
+    }
+    .forest .slide-name2{
+        top: 81%;
+    }
+    /* technology slide ends */
+
+    /* services slide  */
+    .ocean-opacity-box1 h3{
+        font-size: 2.8rem;
+    }
+    .services-txt{
+        left: 62%;
+    }
+    .services-img{
+        /* width: 170px !important; */
+        height: 140px;
+    }
+    .service-info p{
+        font-size: 18px;
+    }
+    .service-info{
+        top:68%;
+        left: 52%;
+        width: 90%;
+    }
+   
+    /* services slide ends */
+
+    /* portfolio slide  */
+    .productTitle h3{
+        font-size: 2.8rem;
+    }
+    @keyframes slide4anm1Text{
+        to{
+            font-size: 2.5rem;
+        }
+    }
+    .customProductBox .productTitle h3{
+        font-size: 2.5rem;
+    }
+    .productDesc p{
+        font-size: 18px;
+    }
+    .tech-used h3{
+        font-size: 18px !important;
+    }
+    .productDesc .tech-used{
+        margin-top: 40px;
+    }
+    .productImage img{
+        animation: slide4anm2Size 1s ease-in-out forwards 1s;
+        width: 170px !important;
+    }
+    #autobet img{
+        width: 130px !important;
+    }
+    #solo img{
+        width: 160px !important;
+    }
+    .slide-ind{
+        font-size: 18px;
+    }
+    .p-tech-icon img{
+        width: 45px;
+        height: 45px;
+    }
+    /* portfolio slide ends */
+
+    /* menu screen  */
+    .menu-items ul li{
+        font-size: 24px;
+        line-height: 2.3;
+    }
+    .menu-items{
+        left: 6%;
+    }
+    .media-box div{
+        font-size: 24px;
+    }
+    /* menu screen ends */
+
+    /* about us  */
+    .cont-heading{
+        font-size: 30px;
+    }
+    .cont-small-text{
+        font-size: 20px;
+    }
+    .cont-media a{
+        font-size: 24px;
+    }
+    /* about us ends */
+
+    /* navbar  */
+    .navbar-brand img{
+        width: 160px;
+    }
+    nav{
+        padding-top: 10spx;
+    }
+    .circle{
+        width: 25px;
+        height: 25px;
+    }
+    /* navbar ends */
+
+}
+
 @media only screen and (min-width: 824px) and (max-width: 1024px) {
     /* loading screen  */
     #logo{
