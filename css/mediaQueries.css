@@ -656,7 +656,7 @@
         width: 80%;
     }
     .nav-link{
-        font-size: 16px;
+        font-size: 14px;
     }
     /* navbar begins ends*/
 
@@ -691,6 +691,9 @@
     /* services slide begins */
     /* technology slide  */
     .productDesc{
+        font-size: 16px;
+    }
+    .productDesc .tech-used h3{
         font-size: 16px;
     }
     /* technology slide begins */
