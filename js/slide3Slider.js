@@ -32,7 +32,7 @@ function goToNxt(){
         slide3Num=2;
         progressWidth+=12.5;
         document.getElementById("s-slideNum").innerText=slide3Num;
-        document.getElementById("prev-btn-txt2").innerHTML="prev";
+        document.getElementById("prev-btn-txt2").innerHTML="Prev";
         floatIMG("s2-img");
         return;
     }
@@ -106,7 +106,7 @@ function goToNxt(){
         slide3Num=5;
         // progressWidth+=12.5;
         document.getElementById("s-slideNum").innerText=slide3Num;
-        document.getElementById("next-btn-txt2").innerHTML="next page";
+        document.getElementById("next-btn-txt2").innerHTML="Next page";
         floatIMG("s5-img");
         return;
     }
@@ -145,7 +145,7 @@ function goToPrev(){
         slide3Num=1;
         progressWidth-=12.5;
         document.getElementById("s-slideNum").innerText=slide3Num;
-        document.getElementById("prev-btn-txt2").innerHTML="prev page";
+        document.getElementById("prev-btn-txt2").innerHTML="Prev page";
         floatIMG("s1-img");
         return;
     }
@@ -221,7 +221,7 @@ function goToPrev(){
         slide3Num=4;
         progressWidth-=12.5;
         document.getElementById("s-slideNum").innerText=slide3Num;
-        document.getElementById("next-btn-txt2").innerHTML="next";
+        document.getElementById("next-btn-txt2").innerHTML="Next";
         floatIMG("s4-img");
         return;
     }

@@ -376,7 +376,7 @@
         display: block;
         border: none;
         color: #fff;
-        font-size: 16px;
+        font-size: 18px;
         transition: 1s;
         /* background-color: rgba(255, 255, 255, 0.1); */
         background: none;
@@ -393,7 +393,7 @@
         width: 80vw;
     }
     .menu-items ul li{
-        font-size: 12px;
+        font-size: 16px;
         line-height: 2.3;
     }
     /* menu screen ends */

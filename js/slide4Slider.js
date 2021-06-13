@@ -25,7 +25,7 @@ function nextProduct(){
             document.getElementById("productBox2").classList.add("activeOwn");
         },changingSlideTime)
         slide4counter=2;
-        document.getElementById("prev-btn-txt3").innerText="prev";
+        document.getElementById("prev-btn-txt3").innerText="Prev";
         return;
     }
     if(slide4counter==2){
@@ -119,7 +119,7 @@ function prevProduct(){
             document.getElementById("productBox").classList.add("activeOwn");
         },changingSlideTime)
         slide4counter=1;
-        document.getElementById("prev-btn-txt3").innerText="prev page";
+        document.getElementById("prev-btn-txt3").innerText="Prev page";
         return;
     }
     if(slide4counter==3){
