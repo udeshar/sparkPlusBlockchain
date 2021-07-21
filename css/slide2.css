@@ -1,0 +1,217 @@
+.forest{
+    height: 100vh;
+    width: 100%;
+    background-color: #242424;
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+.f-opacity-box{
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    right: 0%;
+    height: 90vh;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+
+    background: rgba(112, 111, 111, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(14, 13, 13, 0.63);
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border-bottom-left-radius: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.082);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+
+    animation: fOBox 2s ease forwards;
+}
+@keyframes fOBox{
+    from{
+        height: 10vh;
+        left: 100%;
+    }
+}
+.forest .slide-name2{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forest-name{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 4em;
+    opacity: 0;
+    animation: forestTextAnime1 1s ease forwards 1.8s;
+}
+.forest-info{
+    position: absolute;
+    top:55%;
+    left:15%;
+    transform: translateY(-50%);
+    display: flex;
+    opacity: 0;
+    animation: forestTextAnime2 1s ease forwards 2s;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.forest .forest-explore{
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0;
+    animation: forestTextAnime3 1s ease forwards 2.2s;
+}
+.forest-info div{
+    height: 1px;
+    background-color: #fff;
+    width: 40px;
+    margin-top: 8px;
+    margin-right: 20px;
+}
+.forest-info p{
+    font-size: 13px;
+    width: 50%;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+@keyframes forestTextAnime1{
+    from{
+        left: 20%;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes forestTextAnime2{
+    from{
+        left: 25%;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes forestTextAnime3{
+    from{
+        left: 80%;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.forest .slide-name2 a{
+    color: #fff;
+    /* font-size: 12px; */
+    margin-right: 10px;
+}
+.forest .slide-name2 div{
+    position: absolute;
+    height: 1px;
+    background-color: #fff;
+    right: 120%;
+    left: -200%;
+    animation: slideline2 .5s ease forwards 1s;
+}
+@keyframes slideline2{
+    to{
+        left: -80%;
+    }
+}
+.crypto-logos img{
+    height: 40px;
+    width: 40px;
+    /* opacity: 0; */
+    margin: 0px 10px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    
+}
+@keyframes logoFromLeft{
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+        /* left: 10%; */
+    }
+}
+.crypto-logos{
+    position: absolute;
+    width: 100% !important;
+    bottom: 5%;
+    left: 10%;
+    transform: translateX(20%);
+    opacity: 0;
+    /* animation: logoFromLeft 1.5s ease-out forwards 4s; */
+}
+.slideIcons{
+    animation: logoFromLeft 1s ease-out forwards;
+}
+.crypto-big-logos{
+    height: 230px;
+    width: 230px;
+    position: absolute;
+    top: 30%;
+    left: -25%;
+    transform: translate(-50%,-50%); 
+}
+.ts1{
+    animation: fade_in 1s ease forwards 1.5s;
+}
+.technology-slider{
+    opacity: 0;
+}
+
+@keyframes fade_in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.next-arrow{
+    opacity:0;
+    animation:fade_in 0.5s ease forwards 1.5s;
+    /* font-size: 12px; */
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.prev-arrow{
+    opacity:0;
+    animation:fade_in 0.5s ease forwards 1.5s;
+    /* font-size: 12px; */
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.fade_out{
+    animation: fade_out 1s ease forwards;
+}
+@keyframes fade_out{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.fade_in{
+    animation: fade_in 1s ease forwards 1s;
+}
