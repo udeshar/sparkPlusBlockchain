@@ -17,6 +17,9 @@
     left: 50%;
     transform: translate(-50%,-50%); 
 }
+#image0{
+    overflow: visible;
+}
 /* #logo,mask{
     animation: fill .5s ease forwards 3.5s;
 }
@@ -67,7 +70,7 @@
 } */
 
 #logo,mask{
-    filter: drop-shadow(1px 1px 3px rgba(44, 206, 255, 0.377));
+    /* filter: drop-shadow(1px 1px 3px rgba(44, 206, 255, 0.377)); */
     animation: fillPaths .8s ease forwards 4.5s;
 }
 @keyframes fillPaths{
